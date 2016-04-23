@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	</head>
+	<body>
+		<h2>figure和figcaption标签</h2>
+		<ul>
+			<li>figure:HTML5语义化标签，用于规定独立的流内容（图像、图表、照片、代码等等）</li>
+			<li>figcaption:HTML5语义化标签，与figure配套使用，用于标签定义figure元素的标题</li>
+			<li>兼容性：IE9、Firefox、Chrome、Opera、Safari</li>
+		</ul>
+		<figure>
+			<img src="img/missFortune.png" width="100" height="100"/>
+			<figcaption>figcaption</figcaption>
+		</figure>
+		
+		<h2>transform和transition</h2>
+		<ul>
+			<li>transform:用于元素的变形处理。
+				<ul>
+					<li>属性：translate（平移），rotate（旋转），scale（缩放），skew（斜切）
+						<ul>
+							<li>
+								transform-translate:
+								<ul>
+									<li>指定对象的2D translation(2D平移)</li>
+									<li>第一个参数对应X轴(右为正)，第二个参数对应Y轴（下为正）</li>
+									<li>若第二个参数未提供，则默认值为0，单位：px</li>
+								</ul>
+							</li>
+							<li>
+								transform-rotate:
+								<ul>
+									<li>指定对象的2D rotation（2D旋转），需先有transform-origin属性的定义</li>
+									<li>不设置origin，则绕正中心旋转，若设置如下例则绕最左上角旋转</li>
+									<li>顺时针为正，eg: rotate(90deg),transform-origin:0 0;单位：deg</li>
+								</ul>
+							</li>
+							<li>
+								transform-scale:
+								<ul>
+									<li>指定对象的2D scale（2D缩放）</li>
+									<li>第一个参数对应X轴，第二个参数对应Y轴</li>
+									<li>若第二个参数未提供，则默认取第一个参数的值，无单位</li>
+									<li>eg:scale(0.5,0.5),1不变化，大于1放大，小于1缩小，未设置origin，从中心往外缩放，设置了origin，相对于origin缩放</li>
+								</ul>
+							</li>
+							<li>
+								transform-skew:
+								<ul>
+									<li>指定对象skew transformation（斜切扭曲）</li>
+									<li>第一个参数对应X轴，第二个参数对应Y轴，左为正，下为正</li>
+									<li>若第二个参数未提供，则默认值为0，单位：deg</li>
+									<li>eg:skew(50deg,20deg)，设置origin规则如上</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>兼容性：IE9、Firefox、Chrome、Opera、Safari</li>
+				</ul>
+			</li>
+			<li>transition:用于元素的过度动画处理。
+				<ul>
+					<li>属性：property，duration，timing-function，delay
+						<ul>
+							<li>
+								property:
+								<ul>
+									<li>检索或设置对象中的参与过度的属性</li>
+								</ul>
+							</li>
+							<li>
+								duration:
+								<ul>
+									<li>过度动画的持续时间，单位：秒s</li>
+								</ul>
+							</li>
+							<li>
+								timing-function:
+								<ul>
+									<li>检索或设置对象中过渡的动画类型</li>
+									<li>Linear（匀速），ease（默认，低速—加快-变慢），ease-in（低速开始），ease-out（低速结束），ease-in-out（低速开始和结束）</li>
+								</ul>
+							</li>
+							<li>
+								delay:
+								<ul>
+									<li>检索或设置对象延迟过渡的时间</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>兼容性：IE10、Firefox、Chrome、Opera、Safari</li>
+				</ul>
+			</li>
+		</ul>
+	
+		<h2>媒体查询</h2>
+		<p>即通过不同的媒体类型和条件定义样式规则</p>
+		<p>媒体查询让CSS可以更精确作用于不同的媒体类型和同一媒体的不同条件</p>
+		<p>媒体查询的大部分媒体特性都接受min和max用于表达“大于或等于”和“小与或等于”</p>
+		<p>eg:width会有min-width和max-width</p>
+		<p>媒体查询可被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中</p>
+		<p>@media screen and (width:800px){...}</p>
+		<p>@import url(example.css)screen and (width:800px);</p>
+		<p><link media="screen and(width:800px)" rel="stylesheet" href="example.css"/></p>
+		
+		<div class="box">
+			<figure class="fig1">
+				<img src="img/ahri.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>Ahri</p>
+					<p>灵魄突袭</p>
+					<p>魅惑妖术</p>
+				</figcaption>
+			</figure>
+			<figure class="fig2">
+				<img src="img/garen.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>Garen</p>
+					<div></div>
+				</figcaption>
+			</figure>
+			<figure class="fig3">
+				<img src="img/katarina.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>卡特琳娜是刺客法师类型，灵活的移动能力能很好地追杀、突袭、和逃跑，无蓝条又能刷新技能最容易五杀的英雄，但容易被针对。</p>
+				</figcaption>
+			</figure>
+			<figure class="fig4">
+				<img src="img/lux.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>Lux</p>
+				</figcaption>
+			</figure>
+			<figure class="fig5">
+				<img src="img/masterYi.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>MasterYi</p>
+				</figcaption>
+			</figure>
+			<figure class="fig6">
+				<img src="img/missFortune.png" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>MissFortune</p>
+				</figcaption>
+			</figure>
+			<figure class="fig7">
+				<img src="img/teemo.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>Teemo</p>
+				</figcaption>
+			</figure>
+			<figure class="fig8">
+				<img src="img/Tristana.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>Tristana</p>
+				</figcaption>
+			</figure>
+			<figure class="fig9">
+				<img src="img/unforgiven.jpg" width="550" height="350"/>
+				<figcaption>
+					<h4>LOL</h4>
+					<p>Unforgiven</p>
+				</figcaption>
+			</figure>
+		</div>
+	</body>
+</html>

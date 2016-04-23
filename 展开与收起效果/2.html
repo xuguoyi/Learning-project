@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				text-align: center;
+				width: 550px;
+				margin: 0 auto;
+			}
+			#container{
+				background-color: #ccc;
+				overflow: hidden;
+			}
+			.wel{
+				background-color: #aaa;
+				padding: 5px 0;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<p>setTimeout(code,millisec)方法用于在指定的毫秒数后调用函数或计算表达式</p>
+		<p>onload()事件：在页面或图像加载完成后立即发生</p>
+		<div id="container">
+			<h1>欢迎来到此地~~</h1>
+			<img src="img/missFortune.png"/>
+		</div>
+		<div class="wel">我们欢迎你</div>
+	</body>
+	<script type="text/javascript">
+		var h=0;
+		function addH(){
+			if(h<295){
+				h+=5;
+				document.getElementById("container").style.height = h + "px"; 
+			}else{
+				return;
+			}
+			setTimeout("addH()",30);
+		}
+		window.onload = function show(){
+			addH();
+			setTimeout("delH()",5000);
+		}
+		function delH(){
+			if(h>0){
+				h-=5;
+				document.getElementById("container").style.height = h + "px"; 
+			}else{
+				return;
+			}
+			setTimeout("delH()",30);
+		}
+	</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1,h3{
+				text-align: center;
+			}
+			#container{
+				width: 800px;
+				margin: 0 auto;
+				background-color: #fff;
+				padding: 10px;
+			}
+			#box{
+				/*display: none;*/
+				border: 5px solid #ccc;
+				background-color: #eee;
+				padding: 0px 10px;
+			}
+			a{
+				text-decoration: none;
+			}
+			.footer{
+				padding: 5px;
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>JavaScript实现多个展开与收起效果</h1>
+		<p>nextSiBling:返回某个元素之后紧跟的元素（处于同一树层级）</p>
+		<p>previousSiBling:返回某节点之前紧跟的节点（处于同一树层级）</p>
+		
+		<div id="container">
+			<h3>药理学口诀</h3>
+			<p>
+				现在才发现有个记药那么好的口决，可惜呀，
+				如果早在读书的时候就有那有多好，
+				我的药理当时就不用学得那么烂。
+				不过现在也可以派上用场，
+				让大家也学一下！<a href="javascript:;" onclick="ah(this)">......全文</a>
+			</p>
+			<div id="box">
+				<p>
+					现在才发现有个记药那么好的口决，可惜呀，
+					如果早在读书的时候就有那有多好，
+					我的药理当时就不用学得那么烂。
+					不过现在也可以派上用场，
+					让大家也学一下！
+				</p>
+				<p>拟胆碱药</p>
+				<p>拟胆碱药分两类，兴奋受体抑制酶；<br>
+					匹罗卡品作用眼，外用治疗青光眼；<br />
+					新斯的明抗酯酶，主治重症肌无力；<br/>
+					毒扁豆碱毒性大，作用眼科降眼压。
+				</p>
+				<p>阿托品</p>
+				<p>莨菪碱类阿托品，抑制腺体平滑肌；<br />
+					瞳孔扩大眼压升，调节麻痹心率快；<br />
+					大量改善微循环，中枢兴奋须防范；<br />
+					作用广泛有利弊，应用注意心血管。<br />
+					临床用途有六点，胃肠绞痛立即缓；<br />
+					抑制分泌麻醉前，散瞳配镜眼底检；<br />
+					防 止“虹晶粘”，能 治 心 动 缓；<br />
+					感染休克解痉挛，有机磷中毒它首选。
+				</p>
+				<p>东莨菪碱</p>
+				<p>
+					镇静显著东莨菪碱，能抗晕动是特点；<br />
+					可治哮喘和“震颤”，其余都像阿托品，<br />
+					只是不用它点眼。
+				</p>
+				<div class="footer">
+					<button type="button" onclick="btn(this)">收起全文</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function ah(obj){
+			var x = obj.parentNode;//找父级元素
+			var y = x.nextSibiling;//找下一个兄弟元素
+			x.style.display = "none";
+			y.style.display = "block";
+		}
+		function btn(obj){
+			var y = obj.parentNode.parentNode;
+			var x = y.previousSibiling;
+			x.style.display = "block";
+			y.style.display = "none";
+		}
+	</script>
+</html>

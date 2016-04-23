@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			div,ul,li{
+				margin:0;
+				padding:0;
+			}
+			div{
+				width: 500px;
+				margin: 0 auto;
+			}
+			li{
+				list-style-type:none;
+			}
+			.main>li{
+				float:left;
+				text-align: center;
+				position: relative;
+			}
+			a{
+				text-decoration: none;
+				background-color:#ccc;
+				display: block;
+				width: 80px;
+			}
+			a:hover{
+				background-color:#aaa;
+				color: #fff;
+			}
+			.main>li>ul{
+				background-color: #ccc;
+				display: none;
+				position: relative;
+			}
+			ul li ul li{
+				border-top:1px solid #fff;
+			}
+			.main>li>ul>li>ul{
+				position: absolute;
+				top: 0;
+				left: 80px;
+			}
+			.main>li:hover ul{
+				display: block;
+			}
+			.main>li:hover ul>li>ul{
+				display: none;
+			}
+			.main>li>ul>li:hover ul{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>多级菜单</h1>
+		<div>
+			<ul class="main">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">课程大厅</a>
+				</li>
+				<li>
+					<a href="#">学习中心+</a>
+					<ul>
+						<li>
+							<a href="#">视频学习+</a>
+							<ul>
+								<li>
+									<a href="#">JavaScript</a>
+								</li>
+								<li>
+									<a href="#">jQuery</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">案例学习</a>
+						</li>
+						<li>
+							<a href="#">交流平台</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">经典案例</a>
+				</li>
+				<li>
+					<a href="#">关于我们</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+
+
+

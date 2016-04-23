@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="checkbox" name="all" value="" />all<br />
+		<input type="checkbox" name="item" value="" />apple<br />
+		<input type="checkbox" name="item" value="" />pear<br />
+		<input type="checkbox" name="item" value="" />orange<br />
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('[name="all"]').click(function(){
+			$('[name="item"]').prop("checked",$(this).prop("checked"));
+		});
+		$("body").on("click",'[name="item"]',function(){
+			$('[name="all"]').prop("checked",$('[name = "item"]').length == $('[name="item"]:checked').length);
+		});
+	</script>
+</html>

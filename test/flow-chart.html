@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="request">
+<head>
+	<meta charset="UTF-8">
+	<title>flow-chart</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css">
+		/*导航栏*/
+		.subtitle{
+			margin:5px;
+		}
+		.subtitle li{
+			list-style-type: none;
+			float: left;
+		}
+		.subtitle:after{
+			display: table;
+			content: "";
+			clear: both;
+		}
+		.without-approval, .approval, .already-approval{
+			width: 150px;
+			height: 24px;
+			margin-left: 5px;
+		}
+		.without-approval{
+			background-color:#bbb;
+		}
+		.approval{
+			background-color:#449d44;
+		}
+		.already-approve{
+			background-color:#E42B2B;
+		}
+
+		/*流程*/
+		.lc li{
+			list-style-type: none;
+		    height: 80px;
+		    position: relative;
+		    text-align: center;
+		}
+		.lc li:before{
+			content: '';
+			top: 1.5em;
+		    position: absolute;
+		    width: 2px;
+		    background-color: #3f7fbf;
+		    bottom: 0;
+		    left: 50%;
+		}
+		.lc li:after{
+			content: '';
+		    border: 10px solid #fff;
+		    position: absolute;
+		    border-top-color: #3f7fbf;
+		    bottom: 0;
+		    left: 50%;
+		    margin-left: -10px;
+		}
+		.lc li:last-child:before,.lc li:last-child:after{
+			content: none;
+		}
+		.lc li.ed:before{
+		    background-color: #E42B2B;
+		}
+		.lc li.ed:after{
+		    border-top-color: #E42B2B;
+		}
+		.start_text {
+		    padding: .5em;
+		    color:#fff;
+		}
+		.start .start_text,.end .end_text{
+			border: 1px solid #3f7fbf;
+			background-color: #3f7fbf;
+			border-radius: 25px;
+			padding:5px 20px;
+			color:#fff;
+			font-size: 16px;
+			font-family: "微软雅黑";
+		}
+		.jd_item{
+			width: 200px;
+			margin: 0 auto;
+			padding: .5em;
+			color:#fff;
+			position: relative;
+			bottom: 10px;
+			background-color:#bbb;
+		}
+		.ing .jd_item{
+			background-color: #449d44;
+			border: 1px solid #449d44;
+		}
+		.ing .jd_item:hover{
+			background-color:#fff;
+			color:#449d44;
+		}
+		.ed .jd_item{
+			background-color:#E42B2B;
+		}
+	</style>
+</head>
+<body>
+	<ul class="subtitle">
+		<li>未经审批</li>
+		<li class="without-approval"></li>
+	</ul>
+	<ul class="subtitle">
+		<li>正在审批</li>
+		<li class="approval"></li>
+	</ul>
+	<ul class="subtitle">
+		<li>已经审批</li>
+		<li class="already-approve" style="width: 150px;height: 24px;margin-left: 5px;"></li>
+	</ul>
+	<ul class="lc">
+		
+	</ul>
+</body>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+	var data = {
+		"jd":["金肖明","胡一群","何嘉俊","石头","姚玉龙","李白"],
+//		"tip":["金肖明1","胡一群1","何嘉俊1","石头1","姚玉龙1","李白1"],
+		"zt":"石头",
+		"yj":["金肖明","何嘉俊"]
+	};
+	
+	var li_s = $('<li class="start"><span class="start_text">开始</span></li>');
+	var li_e = $('<li class="end"><span class="end_text">结束</span></li>');
+				
+	$('.lc').append(li_s);
+	for(var i=0;i<data.jd.length;i++){
+		var $li = $('<li><div class="jd_item" title="'+data.jd[i]+'">'+data.jd[i]+'</div></li>');
+		
+		data.jd[i] === data.zt && $li.addClass('ing');
+
+		~$.inArray(data.jd[i],data.yj) && $li.addClass('ed');
+		
+		$li.find(".jd_item").attr('title',data.jd[i]);
+		$('.lc').append($li);
+	}
+	$('.lc').append(li_e);
+	if(data.zt === "complete"){
+		$('li:not(.start,.end)').addClass('ed');
+	}
+
+</script>
+
+
+</html>

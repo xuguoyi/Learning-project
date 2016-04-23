@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/script.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				background-color:pink;
+				height: 2000px;
+				line-height: 50px;
+				padding-left: 20px;
+			}
+			h1{
+				text-align: center;
+			}
+			h2{
+				color: #f55;
+			}
+			ul li{
+				float: left;
+				list-style-type: none;
+			}
+			ul:after{
+				content: '';
+				clear: both;
+				display: table;
+			}
+			ul li:first-child{
+				width: 320px;
+			}
+			#btn{
+				height: 40px;
+				width: 40px;
+				position: fixed;
+				bottom: 30px;
+				background: #f00;
+				left: 50%;
+				margin-left: 610px;
+				background: url(img/elevator.png) no-repeat -6px -680px;
+				display: none;
+			}
+			#btn:hover{
+				background: url(img/elevator.png) no-repeat -6px -742px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1>运用JavaScript主要知识点</h1>
+			<h2>DOM操作</h2>
+			<ul>
+				<li>1.document.getElementById</li>
+				<li>根据ID获取标签元素</li>
+			</ul>
+			<ul>
+				<li>2.document.documentElement.scrollTop</li>
+				<li>滚动条的数值，可读写</li>
+			</ul>
+			<h2>事件运用</h2>
+			<ul>
+				<li>1.window.onload</li>
+				<li>页面加载完毕后触发</li>
+			</ul>
+			<ul>
+				<li>2.onclick</li>
+				<li>点击后触发</li>
+			</ul>
+			<ul>
+				<li>3.window.onscroll</li>
+				<li>滚动条滚动时触发</li>
+			</ul>
+			<h2>定时器</h2>
+			<ul>
+				<li>1.setInterval()</li>
+				<li>设置定时器，需传2个参数</li>
+			</ul>
+			<ul>
+				<li>2.clearInterval()</li>
+				<li>关闭定时器，需传1个参数</li>
+			</ul>
+		</div>
+		<a href="javascript:;" id="btn"></a>
+	</body>
+</html>

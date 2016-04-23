@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				padding-left:20px;
+				padding-bottom: 20px;
+			}
+			h1{
+				text-align: center;
+			}
+			
+			ul,li{
+				margin: 0;
+				padding: 0;
+			}
+			ul li{
+				list-style-type: none;
+				width: 200px;
+			}
+			ul>li{
+				float: left;
+			}
+			.box1,.box2,.box3{
+				width: 50px;
+				height: 80px;
+				border: 5px solid #3f7fbf;
+				background-color: #eee;
+			}
+			.box1{
+				outline:5px solid #A52A2A;
+			}
+			.box2{
+				outline: 5px solid #A52A2A;
+				outline-offset:10px;
+			}
+			.box3{
+				box-shadow: 0 0 0 5px #A52A2A,0 0 0 10px #f0f,0 0 0 15px #0ff;
+			}
+			
+			/*内凹圆角*/
+			.radius{
+				width: 200px;
+				text-align: center;
+				border: 20px solid #FFA500;
+				border-top-color:#fff;
+				border-left-color:#fff;
+				border-right-color:#fff;
+			}
+			.title{
+				width: 80px;
+				color: #fff;
+				background-color:#FFA500;
+				text-align: center;
+				margin: 0 auto;
+				padding: 5px;
+				border-radius: 15px 15px 0 0;
+				position: relative;
+			}
+			.title:before,.title:after{
+				content: '';
+				width: 15px;
+				height: 15px;
+				background-color: #FFA500;
+				position: absolute;
+				bottom: 0;
+			}
+			.title:before{
+				right: 90px;
+				background:-webkit-radial-gradient(10% 10%, farthest-corner,transparent 70%,#ffa500 70%);
+			}
+			.title:after{
+				left: 90px;
+				background:-webkit-radial-gradient(90% 10%, farthest-corner,transparent 70%,#ffa500 70%);
+			}
+			
+			/*图标*/
+			.smile{
+				border: 2px solid #000;
+				height: 100px;
+				width: 100px;
+				border-radius: 50%;
+				position: relative;
+			}
+			.left,.right{
+				border: 5px solid #000;
+				height: 5px;
+				width: 5px;
+				border-radius: 50%;
+				background-color: #000;
+				position: absolute;
+			}
+			.left{
+				top: 20px;
+				left: 20px;
+			}
+			.right{
+				top: 20px;
+				right: 20px;
+			}
+			.middle{
+				position: absolute;
+				top: 30px;
+				left: 27px;
+				border: 3px solid #000;
+				border-radius: 50%;
+				border-top-color: #fff;
+				border-left-color: #fff;
+				border-right-color: #fff;
+				width: 40px;
+				height: 40px;
+			}
+			.arrow{
+				border-top: 30px solid #000;
+				border-left: 21px solid #000;
+				height: 40px;
+				width: 22px;
+				border-radius: 30px 0 0 30px;
+				position: relative;
+			}
+			.arrow:after{
+				position: absolute;
+			  	content: '';
+			  	border: 30px solid #000;
+			  	border-bottom-color: #fff;
+			  	border-right-color: #fff;
+			  	border-top-color: #fff;
+			  	top: -44px;
+			  	left: 22px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS绘制图标</h1>
+		
+		<h2>近10年来最重要的CSS书————没有之一</h2>
+		<img src="img/css.jpg"/>
+		
+		<h2>多重边框</h2>
+		<ul>
+			<li>
+				<h4>outline</h4>
+				<ul>
+					<li>
+						<div class="box1"></div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h4>outline-offset</h4>
+				<ul>
+					<li>
+						<div class="box2"></div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h4>box-shadow</h4>
+				<ul>
+					<li>
+						<div class="box3"></div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+			
+		<h2 style="clear: both;padding-top:20px;">CSS实现内凹圆角</h2> 
+		<div class="radius">
+			<div class="title">Name</div>
+		</div>
+		
+		
+		<h2>图标</h2>
+		<ul>
+			<li>
+				<div class="smile">
+					<div class="left"></div>
+					<div class="right"></div>
+					<div class="middle"></div>
+				</div>
+			</li>
+			<li style="position: relative;">
+				<div style="border: 2px solid #000;width: 50px;height: 50px;border-radius: 50%;"></div>
+				<div style="width: 50px;border: 5px solid #000;background-color: #000;border-radius: 5px;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);transform: rotate(45deg);position: absolute;top: 60px;left: 38px;"></div>
+			</li>
+			<li style="position: relative;">
+				<div style="border: 2px solid #000;width: 30px;height: 40px;border-radius: 50%;"></div>
+				<div style="width: 60px;height:20px;border: 5px solid #000;background-color: #000;border-radius: 5px 5px 0 0;position: absolute;top: 47px;left: -19px;"></div>
+			</li>
+			<li>
+				<div class="arrow"></div>
+			</li>
+		</ul>
+		
+	</body>
+</html>

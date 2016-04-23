@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			h3,p,ul{
+				padding-left: 50px;
+			}
+			.red{
+				color: #f00;
+				font-weight: bold;
+			}
+			.container{
+				width: 960px;
+				height: 500px;
+				margin: 0 auto;
+				position: relative;
+				background-color: #eee;
+			}
+			img{
+				background-color: #fff;
+				padding: 10px 10px 15px 10px;
+				border: 1px solid #aaa;
+				position: absolute;
+				-webkit-transition:1s;
+				-moz-transition:1s;
+				transition:1s;
+			}
+			img:hover{
+				z-index: 999;
+				-webkit-transform: scale(1.2);
+				-moz-transform: scale(1.2);
+				transform: scale(1.2);
+				box-shadow: 10px 10px 15px #ccc;/*第一个参数：阴影在左边为负数，在右边为正数；第二个参数：垂直方向阴影，正数在下边，负数在上边；第三个参数：阴影的距离*/
+			}
+			.ig1{
+				z-index: 2;
+				top: 50px;
+				left: 30px;
+				-webkit-transform: rotate(20deg);/*Chrome和Safari浏览器的前缀*/
+				-moz-transform: rotate(20deg);/*Firefox浏览器前缀*/
+				transform: rotate(20deg);
+			}
+			.ig2{
+				top: 160px;
+				left: 90px;
+				-webkit-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				transform: rotate(15deg);
+			}
+			.ig3{
+				top: 280px;
+				left: 50px;
+				-webkit-transform: rotate(-15deg);
+				-moz-transform: rotate(-15deg);
+				transform: rotate(-15deg);
+			}
+			.ig4{
+				top: 100px;
+				left: 310px;
+				-webkit-transform: rotate(-15deg);
+				-moz-transform: rotate(-15deg);
+				transform: rotate(-15deg);
+			}
+			.ig5{
+				top: 300px;
+				left: 310px;
+				-webkit-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				transform: rotate(15deg);
+			}
+			.ig6{
+				z-index: 2;
+				top: 150px;
+				left: 530px;
+				-webkit-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				transform: rotate(15deg);
+			}
+			.ig7{
+				top: 100px;
+				left: 600px;
+				-webkit-transform: rotate(-15deg);
+				-moz-transform: rotate(-15deg);
+				transform: rotate(-15deg);
+			}
+			.ig8{
+				top: 250px;
+				left: 650px;
+				-webkit-transform: rotate(15deg);
+				-moz-transform: rotate(15deg);
+				transform: rotate(15deg);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS3照片墙</h1>
+		
+		<h3>使用CSS3实现：</h3>
+		<p>1、旋转；2、缩放；3、阴影；4、动画</p>
+		
+		<h3>分析制作步骤：</h3>
+		<p>1、每张照片的<span class="red">位置</span>不同；</p>
+		<p>2、每张照片有一定的<span class="red">旋转角度</span>；</p>
+		<p>3、照片<span class="red">阴影</span>及<span class="red">缓慢旋转、缓慢放大</span>特效制作。</p>
+		
+		<h3>关键技术点</h3>
+		<ul>
+			<li>box-shadow:
+				<ul>
+					<li>功能：给元素的边框添加阴影的效果；</li>
+					<li>语法：box-shadow：X轴偏移量 Y轴偏移量[阴影模糊半径][阴影扩展半径][阴影颜色][投影方式]</li>
+				</ul>
+			</li>
+			<li>position:
+				<ul>
+					<li>功能：给元素定位，主要用到绝对定位；</li>
+					<li>用法：position:absolute与position:relative配合使用实现相对于包含元素（参照元素）定位</li>
+				</ul>
+			</li>
+			<li>z-index:
+				<ul>
+					<li>功能：设置元素的上下层显示顺序；</li>
+					<li>语法：z-index:整数；</li>
+					<li>注意：拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面</li>
+				</ul>
+			</li>
+			<li>transform:
+				<ul>
+					<li>功能：使元素变形的属性，其配合rotate（旋转角度）、scale（缩放倍数）、skew（扭曲元素）等参数一起使用</li>
+					<li>语法：transform:rotate（旋转角度）；transform:scale（缩放倍数）；</li>
+				</ul>
+			</li>
+			<li>transition:
+				<ul>
+					<li>功能：设置元素由样式1转变为样式2的过程所需时间</li>
+					<li>语法：transition:duration;（此属性的其中一种）</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<div class="container">
+			<img src="img/ahri.jpg" class="ig1"/>
+			<img src="img/garen.jpg" class="ig2"/>
+			<img src="img/katarina.jpg" class="ig3"/>
+			<img src="img/lux.jpg" class="ig4"/>
+			<img src="img/masterYi.jpg" class="ig5"/>
+			<img src="img/missFortune.jpg" class="ig6"/>
+			<img src="img/teemo.jpg" class="ig7"/>
+			<img src="img/unforgiven.jpg" class="ig8"/>		
+		</div>
+	</body>
+</html>

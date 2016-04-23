@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="request">
+<head>
+	<meta charset="UTF-8">
+	<title>flow-chart</title>
+	<style type="text/css">
+		html body {
+		  background: #ffffff;
+		}
+		/*导航栏*/
+		.subtitle{
+			margin:5px;
+		}
+		.subtitle li{
+			list-style-type: none;
+			float: left;
+		}
+		.subtitle:after{
+			display: table;
+			content: "";
+			clear: both;
+		}
+		.without-approval, .approval, .already-approval{
+			width: 150px;
+			height: 24px;
+			margin-left: 5px;
+		}
+		.without-approval{
+			background-color:#bbb;
+		}
+		.approval{
+			background-color:#449d44;
+		}
+		.already-approve{
+			background-color:#f00;
+		}
+
+		/*流程*/
+		#lc li{
+			list-style-type: none;
+		    height: 80px;
+		    position: relative;
+		    text-align: center;
+		}
+		#lc li:before{
+			content: '';
+			top: 1.5em;
+		    position: absolute;
+		    width: 2px;
+		    background-color: #3f7fbf;
+		    bottom: 0;
+		    left: 50%;
+		}
+		#lc li:after{
+			content: '';
+		    border: 10px solid #fff;
+		    position: absolute;
+		    border-top-color: #3f7fbf;
+		    bottom: 0;
+		    left: 50%;
+		    margin-left: -10px;
+		}
+		#lc li:last-child:before,#lc li:last-child:after{
+			content: none;
+		}
+		.start_text {
+		    padding: .5em;
+		    color:#fff;
+		}
+		.start .start_text,.end .end_text{
+			border: 1px solid #3f7fbf;
+			background-color: #3f7fbf;
+			border-radius: 25px;
+			padding:5px 20px;
+			color:#fff;
+			font-size: 16px;
+			font-family: "微软雅黑";
+		}
+		.jd_item{
+			width: 200px;
+			margin: 0 auto;
+			padding: .5em;
+			color:#fff;
+			position: relative;
+			bottom: 10px;
+			background-color:#bbb;
+		}
+		.ing .jd_item{
+			background-color: #449d44;
+			border: 1px solid #449d44;
+		}
+		.ing .jd_item:hover{
+			background-color:#fff;
+			color:#449d44;
+		}
+		.ed .jd_item{
+			background-color:#f00;
+		}
+	</style>
+</head>
+<body>
+	<ul class="subtitle">
+		<li>未经审批</li>
+		<li class="without-approval"></li>
+	</ul>
+	<ul class="subtitle">
+		<li>正在审批</li>
+		<li class="approval"></li>
+	</ul>
+	<ul class="subtitle">
+		<li>已经审批</li>
+		<li class="already-approve" style="width: 150px;height: 24px;margin-left: 5px;"></li>
+	</ul>
+	<ul id="lc">
+		
+	</ul>
+</body>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+	var data = {
+		"jd":["徐国一","王宝","剑圣","石头人","亚索","李白"],
+		"zt":"wc"
+	};
+	var li_s = $('<li class="start"><span class="start_text">开始</span></li>');
+	var li_e = $('<li class="end"><span class="end_text">结束</span></li>');
+	
+	
+	$('#lc').append(li_s);
+	for(var i=0;i<data.jd.length;i++){
+		var $li = $('<li><div class="jd_item" title="'+data.jd[i]+'">'+data.jd[i]+'</div></li>');
+		
+		data.jd[i] === data.zt && $li.addClass('ing');
+		
+		$li.find(".jd_item").attr('title',data.jd[i]);
+		$('#lc').append($li);
+	}
+	$('#lc').append(li_e);
+	$('.ing').prevAll('li:not(.start)').addClass('ed');
+	// $('.ing').nextAll('li:not(.end)').addClass('noted');
+	if(data.zt === "complete"){
+		$('li:not(.start,.end)').addClass('ed');
+	}
+
+</script>
+
+
+</html>

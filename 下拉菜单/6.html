@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			ul,li{
+				margin:0;
+				padding:0;
+			}
+			li{
+				list-style-type:none;
+			}
+			.main>li{
+				float:left;
+			}
+			.main>li{
+				text-align: center;
+				position: relative;
+			}
+			a{
+				text-decoration: none;
+				background-color:#ccc;
+				display: block;
+				width: 80px;
+			}
+			a:hover{
+				background-color:#aaa;
+				color: #fff;
+			}
+			.main>li>ul{
+				background-color: #ccc;
+				position: absolute;
+				display: none;
+			}
+			ul li ul li{
+				border-top:1px solid #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>jQuery实现动画菜单</h1>
+		<ul class="main">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li class="title">
+					<a href="#">课程大厅</a>
+					<ul>
+						<li>
+							<a href="#">JavaScript</a>
+						</li>
+						<li>
+							<a href="#">jQuery</a>
+						</li>
+					</ul>
+				</li>
+				<li class="title">
+					<a href="#">学习中心</a>
+					<ul>
+						<li>
+							<a href="#">视频学习</a>
+						</li>
+						<li>
+							<a href="#">案例学习</a>
+						</li>
+						<li>
+							<a href="#">交流平台</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">经典案例</a>
+				</li>
+				<li>
+					<a href="#">关于我们</a>
+				</li>
+			</ul>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".main>li").mouseenter(function(){
+					$(this).find("ul").slideDown("3000");
+				});
+				$(".main>li").mouseleave(function(){
+					$(this).find("ul").slideUp("3000");
+				});
+			});
+			
+		</script>
+	</body>
+</html>

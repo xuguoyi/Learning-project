@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>水平滑动</title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>水平滑动效果</h1>
+		<img src="img/missFortune.png" id="miss"/><br />
+		<button type="button" id="slide">点击滑动</button>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var miss = document.getElementById("miss")
+			var slide = document.getElementById("slide");
+			
+			slide.onclick = function(){
+				img();
+			}
+			
+			var maxLeft = 700;
+			
+			function img(){
+				var endLeft=parseInt(miss.style.left)+300;
+//				var slideTimer = setInterval(function(){
+//					
+//				})
+			}
+		}
+	</script>
+</html>

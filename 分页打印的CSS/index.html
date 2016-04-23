@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			.format{
+				border: 1px solid #000;
+				width: 900px;
+				margin: 0 auto;
+				margin-top:-1px;
+				border-collapse: collapse;
+			}
+			.format th,.format td{
+				border: 1px solid #000;
+			}
+			.white,.black{
+				display: inline-block;
+				padding: 2px;
+				border: 1px solid #000;
+				width: 2px;
+				height: 2px;
+				margin: 0px 2px;
+			}
+			.black{
+				background-color: #000;
+			}
+		</style>
+		<style media="print">
+	        .pageNext
+	        {
+	            page-break-after: always;
+	        }
+	    </style>
+	</head>
+	<body>
+		<h1>分页打印CSS（见代码）</h1>
+		<table class="format">
+			<tr>
+				<td width="150px" rowspan="3">
+					Automotive Product:<br>
+					(<span class="white"></span>)Yes(<span class="black"></span>)No
+				</td>
+				<td width="px" colspan="2">
+					<span class="black"></span>Engineering Lot
+				</td>
+				<td width="px" rowspan="3">
+					<p><b>禁止带有光阻和BARC的wafer进入</b></p>
+					<p>1．furnace, RTA, RTN, RTP and RTO</p>
+					<p>2．pre-clean bench.</p>
+					<p>3．CVD and PVD.</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="120px">
+					<span class="white"></span>PE Lot
+				</td>
+				<td width="350px">
+					#STR Number#
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="white"></span>PC Lot
+				</td>
+				<td>
+					#BN Number#
+				</td>
+			</tr>
+		</table>
+
+		<table class="format">
+			<tr>
+				<td width="150px">
+					<label>发文工程师/分机/日期</label>
+				</td>
+				<td width="120px">
+					<label>Run Card 编号:</label>
+				</td>
+				<td width="100px">
+					<label>生效日期：</label>
+				</td>
+				<td width="px">
+					<label>申请人部门主管:</label>
+				</td>
+				<td width="px">
+					<label>PIE/TD部门主管:</label>
+				</td>
+				<td width="px">
+					<label>相关工程部主管:</label>
+				</td>
+				<td width="px">
+					<label>制造部相关主管:</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					申请人 #申请人英文名称# #申请人中文名称# #电话# #申请日期# #部门Code#，样例：申请人Changmin Yu 余长敏 180 - 81452 2016-03-17 MEHA/FAB III/PIE/LM/PIE-4
+				</td>
+				<td>
+					#申请编号#
+				</td>
+				<td rowspan="2">
+					#生效日期#
+				</td>
+				<td rowspan="2">
+					#申请部门主管实际处理人员的全称#
+				</td>
+				<td rowspan="2">
+					#PIE/TD部门实际处理人员的全称#
+				</td>
+				<td>
+					(1)#相关工程部1# #相关工程部1实际处理人员的全称#
+				</td>
+				<td>
+					(1)#制造部1# #制造部1实际处理人员的全称#
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Double Check
+				</td>
+				<td>
+					#复查人的全称#
+				</td>
+				<td>
+					(2)#相关工程部2# #相关工程部2实际处理人员的全称#
+				</td>
+				<td>
+					(2)#制造部1# #制造部1实际处理人员的全称#
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					Lot ID:#Lot ID#
+				</td>
+				<td colspan="3">
+					Part ID: #Part ID#.01 
+				</td>
+				<td colspan="2">
+					片数：#申请单片数（单）#
+				</td>
+			</tr>
+		</table>
+		
+		<div class="pageNext"></div>
+		
+		<table class="format">
+			<tr>
+				<td width="180px">
+					Purpose
+				</td>
+				<td width="px" colspan="3">
+					<b>#Purpose，粗体，注意换行展示#</b>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					是否需要follow另一张split run card:
+				</td>
+				<td colspan="3">
+					(<span class="white"></span>)Yes(<span class="black"></span>)No下一张Run Card Number: #另一张split run card编码#
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<p>备注：若选择<b>有</b>下一张split run card, Part A & B部分，无需勾选。</p>
+					<p style="padding-left:36px;">如选择<b>无</b>下一张split run card, Part A & B部分为必填项。</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b>Part A：</b><br>
+					Split Run Card内条件执行完毕后，是否需要merge:
+				</td>
+				<td>
+					(<span class="black"></span>)Yes(<span class="white"></span>)No
+				</td>
+				<td width="180px">
+					<b>Part B：</b><br>
+					Split Run card执行完毕后，Hold Lot通知申请者处理
+				</td>
+				<td>
+					(<span class="white"></span>)Yes(<span class="black"></span>)No
+				</td>
+			</tr>
+			<tr>
+				<td>
+					制造部Comment
+				</td>
+				<td colspan="3">
+					<b>#最后一轮制造部1与制造部2审批填写的备注信息，以；分割，粗体#</b>
+				</td>
+			</tr>
+		</table>
+
+		<table class="format">
+			<tr>
+				<td width="180px" rowspan="2">
+					已预设Hold于
+				</td>
+				<td>
+					LAYER_INSTNUM:# “已预设Hold于”的LAYER_INSTNUM#
+				</td>
+				<td>
+					STEP_INSTNUM: # “已预设Hold于”的STEP_INSTNUM#
+				</td>
+			</tr>
+			<tr>
+				<td>
+					STAGE_NAME: # “已预设Hold于”的STAGE_NAME #
+				</td>
+				<td>
+					STEP_DESC: # “已预设Hold于”的STEP_DESC#
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

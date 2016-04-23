@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			#today{
+				text-align: center;
+				background-color: #3f7fbf;
+				color: #fff;
+				padding: 10px;
+			}
+			.test{
+				text-align: center;
+				background-color: #f00;
+				color: #fff;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>JavaScript Date日期对象</h1>
+		<p>Date()返回当前的日期和时间</p>
+		<p>getDate()查看Date对象并返回日期(1-31)</p>
+		<p>getDay()返回星期几(0-6)</p>
+		<p>getHours()返回小时数(0-23)</p>
+		<p>getMinutes()返回分钟数(0-59)</p>
+		<p>getMonth()返回月份值（从0开始，+1）</p>
+		<p>getSeconds()返回秒数</p>
+		<p>getTime()返回毫秒数</p>
+		<p>getYear()返回年份，获得年最好用</p>
+		<p>getFullYear()方法来操作（完整格式，如2016）</p>
+		<p>Math对象方法：Math.ceil()方法执行的是向上取整计算，它返回的是大于或等于函数参数，并且与之最接近的整数。</p>
+		<p>parseInt()取整</p>
+		<p>定义对象的关键词：var myDate = new Date()</p>
+		
+		<p id="today"></p>
+		<p class="test">距离考研还有<span id="countdown"></span>天</p>
+		<p class="test">限时抢：还剩<span id="time-limit"></span></p>
+		<script type="text/javascript">
+			window.onload = function(){
+				//当前日期
+				showTime();
+				
+				//考研
+				var curtime = new Date();
+				var endtime = new Date("2017,12,28");
+				var lefttime = Math.ceil((endtime.getTime() - curtime.getTime())/(24*60*60*1000));
+				document.getElementById("countdown").innerHTML = lefttime;
+				
+				//限时抢
+				show();
+				
+			}
+			function checkTime(i){
+				if(i<10){
+					i = "0"+i;
+				}
+				return i;
+			}
+			function showTime(){
+				var myDate = new Date();
+				var year = myDate.getFullYear();
+				var month = myDate.getMonth()+1;
+				var date = myDate.getDate();
+				var d = myDate.getDay();
+				var day = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+				var h = myDate.getHours();
+				var min = myDate.getMinutes();
+				var s = myDate.getSeconds();
+				min = checkTime(min);
+				s = checkTime(s);
+				document.getElementById("today").innerHTML = year + '年' + month + '月' + date + '日' + day[d] + h + ':' + min + ':' + s;
+				setTimeout(showTime,500);
+			}
+			
+			function show(){
+				var nowTime = new Date();
+				var endTime = new Date("2017/12/28,09:00:00");
+				var lastTime = parseInt((endTime.getTime()-nowTime.getTime())/1000);
+				var d = parseInt(lastTime/(24*60*60));
+				var h = parseInt(lastTime/(60*60)%24);
+				var m = parseInt(lastTime/60%60);
+				var s = parseInt(lastTime%60);
+				document.getElementById("time-limit").innerHTML = d + '天' + h + "时" + m + "分" + s + "秒";
+				setTimeout(show,500);
+				if(lastTime<=0){
+					document.getElementById("time-limit").innerHTML = "结束~";
+				}
+			}
+		</script>
+	</body>
+</html>

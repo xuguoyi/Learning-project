@@ -1,0 +1,2721 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!--[if gte IE 8]><link rel="stylesheet" href="/engin/style/ie8.css" /><![endif]-->
+<script src="/engin/script/lang-cn.js"></script>
+
+<script>
+	var ctx = '/engin';
+	var orgctx = 'http://172.28.208.145/org';
+	var attachctx = 'http://172.28.208.145/attach';
+	var premctx = 'http://172.28.208.145/permission';
+</script>
+
+    
+    <link rel="stylesheet" href="http://172.28.208.145/resource/style/request-form.css" />
+    
+<style type="text/css">
+    .yzsq-guide ul{
+        border:1px solid #eee;
+    }
+    .yzsq-guide ul li{
+        padding:0 10px 10px;
+        font-size: 20px;
+        color:#fff;
+        height: 60px;
+        line-height: 70px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #eee;
+    }
+    .yzsq-guide ul li:hover{
+        font-size: 22px;
+    }
+    .yzsq-guide ul li label{
+        cursor: pointer;
+    }
+    .yzsq-guide ul li[data-flag="NP"]{
+        background-color: #6db9d8;
+    }
+    .yzsq-guide ul li[data-flag="PU"]{
+        background-color: #79cd7d;
+    }
+    .yzsq-guide ul li[data-flag="MC"]{
+        background-color: #e59090;
+    }
+    .yzsq-guide ul li[data-flag="SP"]{
+        background-color: #d8d76d;
+    }
+    .list-grid th{
+        line-height: 1.5em;
+    }
+
+    .Adaptive-textarea{
+        width: 100%;
+        height: 48px;
+    }
+</style>
+    <style type="text/css">
+        .have-show .have-sp{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <form id="requrest-form" action="online-mosfet!submitCreate.do" method="post">
+        <input type="hidden" name="taskInfo.taskId" value="" />
+<input type="hidden" name="taskInfo.processId" value="OMFProcess" />
+<input type="hidden" name="taskInfo.instanceId" value="" />
+<input type="hidden" name="taskInfo.basicinfoId" value="" />
+<input type="hidden" name="taskInfo.activityName" value="Create" />
+<input type="hidden" name="taskInfo.activityDisplayname" value="Create" />
+<input type="hidden" name="taskInfo.currentPersons" value="邵文怡,Sophia Shao(000955)" />
+<input type="hidden" name="taskInfo.grantorEmpuid" value="000955" />
+<input type="hidden" name="taskInfo.grantorDisplayname" value="邵文怡,Sophia Shao(000955)" />
+<input type="hidden" name="taskInfo.approverEmpuid" value="000955" />
+<input type="hidden" name="taskInfo.approverDispayname" value="邵文怡,Sophia Shao(000955)" />
+<input type="hidden" name="taskInfo.isSubTask" value="" />
+<input type="hidden" name="taskInfo.title" value="" />
+
+<input type="hidden" id="submitType" name="taskInfo.submitType" />
+<input type="hidden" id="submitDecision" name="taskInfo.decision"  />
+        
+
+
+
+
+
+
+
+
+<input type="hidden" name="formDTO.form.id" value="" />
+<input type="hidden" name="formDTO.form.version" value="" />
+<input type="hidden" name="formDTO.form.pid" value="" />
+
+<div class="req-hd">
+    <table class="form-grid" >
+        <tbody>
+        <tr>
+            <td colspan="2" rowspan="2">
+                <div class="form-name">
+                    <h1 style="font-size: 25px">
+                        
+                        
+                            Online MOSFET
+                        
+                    </h1>
+                    <input type="hidden" name="formDTO.form.mosfetType" value="MOSFET"/>
+                </div>
+            </td>
+            <th>
+                <label>申请编号</label>
+                <input type="hidden" name="formDTO.form.requestNo" value="">
+            </th>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label>申请时间</label>
+            </th>
+            <td>
+                2016-04-18
+                <input type="hidden" name="formDTO.form.requestDate" value="Mon Apr 18 10:47:25 CST 2016">
+            </td>
+        </tr>
+        <tr class="row-subject">
+            <th>
+                <label>主题</label>
+            </th>
+            <td>
+                <input type="text" class="text text-subject" name="formDTO.form.subject" value="" readonly="readonly">
+            </td>
+            <th>
+                <label>起草人</label>
+            </th>
+            <td>
+                邵文怡,Sophia Shao(000955)
+                <input type="hidden" name="formDTO.form.drafter.id" value="000955"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="validate-messages">
+    <h2 class="validate-messages-title">错误信息：</h2>
+    <a href="javascript:;" class="validate-messages-close"></a>
+    <ul class="validate-messages-list"></ul>
+</div>
+
+        <div class="req-wrap">
+            
+<ul class="tab-nav-list clear">
+    <li class="item selected">
+        <a href="javascript:;">申请栏</a>
+    </li>
+    <li class="item ">
+        <a href="javascript:;">审批栏</a>
+    </li>
+</ul>
+
+            <div class="tab-cnt-list">
+                <div>
+                    
+<h3 class="fold-hd" >
+    <a href="javascript:;" class="hd-icon-text">基本信息</a>
+</h3>
+
+<div class="fold-cnt">
+    <table class=" form-grid ">
+        <tbody>
+        <tr class="placeholder">
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>
+                <label>申请人</label>
+            </th>
+            <td>
+                邵文怡,Sophia Shao(000955)
+            </td>
+            <th>
+                <label>所属组织</label>
+            </th>
+            <td>
+                FIEH/IT/EIM I/BPM
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label>工号</label>
+            </th>
+            <td>
+                000955
+            </td>
+            <th>
+                <label>分机号码</label>
+            </th>
+            <td>
+                81872/66126
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+                    
+<h3 class="fold-hd">
+    <a href="javascript:;" class="hd-icon-text">产品信息</a>
+</h3>
+
+<input type="hidden" name="detailDivision" />
+<input type="hidden" name="detailProductCode" />
+
+<div class="fold-cnt">
+    <table class="form-grid">
+        <tbody>
+        <tr class="placeholder">
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>
+                <label class="require">Online依赖类型</label>
+            </th>
+            <td>
+                <span id="omfType"></span>
+                <input type="hidden" data-name="omfType" name="formDTO.form.omfType" value=""/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="hidden" name="formDTO.form.lastDivision" value="" />
+    <table class="list-grid">
+        <caption style="color:#fff;background-color:#3F7FBF;width:150px;border-radius:5px 5px 0 0;font-size:16px;padding:5px;text-align:center;">基地品名</caption>
+        <thead>
+        <tr>
+            <th width="10px">
+
+            </th>
+            <th width="30px">
+                NO
+            </th>
+            <th width="250px">
+                <label class="require">基地品名</label>
+            </th>
+            <th width="px">
+                <label class="require">产品代码</label>
+            </th>
+            <th width="30px">
+
+            </th>
+            <th width="30px">
+
+            </th>
+        </tr>
+        </thead>
+        <tbody class="repeat repeat-editMe" data-repeat-index="0">
+        
+        </tbody>
+    </table>
+    <div class="repeat-add-row repeat-add-row-editMe">
+        <a href="javascript:;" class="repeat-add" data-repeat="tmpl-repeat-editMe"></a>
+    </div>
+
+    <input type="hidden" name="detailLotId" />
+    <input type="hidden" name="detailIsExtends" />
+
+    <table class="list-grid lot-id" style="display: none">
+        <caption style="color:#fff;background-color:#3F7FBF;width:150px;border-radius:5px 5px 0 0;font-size:16px;padding:5px;text-align:center;">Lot ID</caption>
+        <thead>
+        <tr>
+            <th width="40px">
+
+            </th>
+            <th width="30px">
+                NO
+            </th>
+            <th width="px">
+                <label class="require">Lot ID</label>
+            </th>
+            <th width="px">
+                <label class="require">目标Lot分割的子Lot是否继承母Lot特殊条件</label>
+            </th>
+            <th width="px">
+                <label>状态</label>
+            </th>
+            <th width="30px">
+
+            </th>
+            <th width="30px">
+
+            </th>
+        </tr>
+        </thead>
+        <tbody class="repeat repeat-editMe1" data-repeat-index="0">
+        
+        </tbody>
+    </table>
+    <div class="repeat-add-row repeat-add-row-editMe1 lot-id" style="display:none;">
+        <a href="javascript:;" class="repeat-add" data-repeat="tmpl-repeat-editMe1"></a>
+    </div>
+</div>
+                    
+<div class="related-lot">
+
+</div>
+                    
+<h3 class="fold-hd wits-setting" style="display:none;">
+    <a href="javascript:;" class="hd-icon-text">WITS设定</a>
+</h3>
+
+<div class="fold-cnt wits-setting" style="display:none;">
+    <table class="form-grid">
+        <tbody>
+        <tr class="placeholder">
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th class="iec-dcc" style="display:none;">
+                <label class="require">测试程序报告书(IEC/DCC)</label>
+            </th>
+            <td class="iec-dcc" style="display:none;">
+                <input data-name="iecReqNo" name="formDTO.form.iecReqNo" value="" type="text" class="text" onblur="changeIec();" style="width:80%"/>
+                <div title="测试程序报告书(IEC/DCC)" class="text-icon-selector" style="width: 1px; height: 20px;line-height:20px; display: inline-block;" readonly="readonly" data-action-type="Iec-default@callBackIec">
+                </div>
+                <input data-name="iecId" name="formDTO.form.iecId" value="" type="hidden" />
+                <input data-name="copyIecReqNo" value="" type="hidden" />
+            </td>
+            
+            <th class="sample-selection" style="display:none;">
+                <label class="require">抽样选择</label>
+            </th>
+            <td class="sample-selection" style="display:none;">
+                <select data-name="sample" name="formDTO.form.sample" class="select">
+                    <option value=""></option>
+                    <option value="S" title="单步测试" >单步测试</option>
+                    <option value="M" title="多步测试" >多步测试</option>
+                </select>
+            </td>
+            
+        </tr>
+        </tbody>
+    </table>
+
+    <input type="hidden" name="detailPwsCode"/>
+    <input type="hidden" name="detailPwsIecPw"/>
+    <input type="hidden" name="detailPwsProductName"/>
+    <input type="hidden" name="detailPwsProbeCartPicNo"/>
+    <input type="hidden" name="detailPwsTestBaseNo"/>
+    <input type="hidden" name="detailPwsTemperature"/>
+    <input type="hidden" name="detailPwsTestPlatform"/>
+    <input type="hidden" name="detailPwsDirectory"/>
+    <input type="hidden" name="detailPwsProgName"/>
+
+    <table class="list-grid flow-iec">
+        <caption style="color:#fff;background-color:#3F7FBF;width:300px;border-radius:5px 5px 0 0;font-size:16px;padding:5px;text-align:center;">Flow中工程Code和IEC PW程序对应关系</caption>
+        <thead>
+        <tr>
+            <th width="30px">
+                NO
+            </th>
+            <th width="px">
+                <label class="require">工程code</label>
+            </th>
+            <th width="px">
+                <label class="require">IEC中PW序列</label>
+            </th>
+            <th width="140px">
+                <label class="require">品种参数名</label>
+            </th>
+            <th width="px" class="have-sp" style="display:none;">
+                <label class="require">探针卡图面No.</label>
+            </th>
+            <th width="px" class="have-sp" style="display:none;">
+                <label class="require">测试基板No.</label>
+            </th>
+            <th width="px" class="have-sp" style="display:none;">
+                <label class="require">测试温度</label>
+            </th>
+            <th width="px" class="have-sp" style="display:none;">
+                <label class="require">测试平台</label>
+            </th>
+            <th width="px" class="have-sp" style="display:none;">
+                <label class="require">程序路径</label>
+            </th>
+            <th width="px" class="have-sp" style="display:none;">
+                <label class="require">程序名</label>
+            </th>
+            <th width="30px">
+
+            </th>
+        </tr>
+        </thead>
+        <tbody class="repeat repeat-editMe2 have-show" data-repeat-index="0">
+        
+        </tbody>
+    </table>
+    <div class="repeat-add-row repeat-add-row-editMe2 flow-iec">
+        <a href="javascript:;" class="repeat-add" data-repeat="tmpl-repeat-editMe2"></a>
+    </div>
+
+    <table class="form-grid map">
+        <tbody>
+        <tr class="placeholder">
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>
+                <label class="require">工程间MAP合成</label>
+            </th>
+            <td>
+                <select data-name="mapMerge" name="formDTO.form.mapMerge" class="select">
+                    <option value=""></option>
+                    <option value="Y" title="是" >是</option>
+                    <option value="N" title="否" >否</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <input type="hidden" name="detailMapsTargetCode"/>
+    <input type="hidden" name="detailMapsComposeCode"/>
+
+    <table class="list-grid map-target-compose" style="display:none;">
+        <caption style="color:#fff;background-color:#3F7FBF;width:200px;border-radius:5px 5px 0 0;font-size:16px;padding:5px;text-align:center;">工程间MAP合成</caption>
+        <thead>
+        <tr>
+            <th width="40px">
+
+            </th>
+            <th width="30px">
+                NO
+            </th>
+            <th width="px">
+                <label class="require">Target Process Code</label>
+            </th>
+            <th width="px">
+                <label class="require">Compose Process Code</label>
+            </th>
+            <th width="30px">
+
+            </th>
+            <th width="30px">
+
+            </th>
+        </tr>
+        </thead>
+        <tbody class="repeat repeat-editMe3" data-repeat-index="0">
+        
+        </tbody>
+    </table>
+    <div class="repeat-add-row repeat-add-row-editMe3  map-target-compose" style="display:none;">
+        <a href="javascript:;" class="repeat-add" data-repeat="tmpl-repeat-editMe3"></a>
+    </div>
+</div>
+                    
+<h3 class="fold-hd">
+    <a href="javascript:;" class="hd-icon-text">WITS监控</a>
+</h3>
+
+<div class="fold-cnt">
+    <table class="form-grid">
+        <tbody>
+        <tr class="placeholder">
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th class="monitoring-selection" style="display:none;">
+                <label class="require">监控选择</label>
+            </th>
+            <td class="monitoring-selection" style="display:none;">
+                <select data-name="watchSelect" name="formDTO.form.watchSelect" class="select">
+                    <option value=""></option>
+                    <option value="已有量产品名监控，可同量产设定" title="已有量产品名监控，可同量产设定" >已有量产品名监控，可同量产设定</option>
+                    <option value="有量产品名监控，但需特定监控" title="有量产品名监控，但需特定监控" >有量产品名监控，但需特定监控</option>
+                    <option value="无量产品名监控" title="无量产品名监控" >无量产品名监控</option>
+                </select>
+            </td>
+            
+            <th class="monitoring-data-loading">
+<!--                 <label>监控数据加载</label> -->
+            </th>
+            <td class="monitoring-data-loading">
+                <button class="button" type="button" onclick="openTemplates()">监控数据加载</button>
+            </td>
+            
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="single-watch">
+    <input type="hidden" name="detailSingleWiCode"/>
+    <input type="hidden" name="detailSingleWiBin"/>
+    <input type="hidden" name="detailSingleWiPattern"/>
+    <input type="hidden" name="detailSingleWiValue"/>
+
+    <table class="list-grid">
+        <caption style="color:#fff;background-color:#3F7FBF;width:200px;border-radius:5px 5px 0 0;font-size:16px;padding:5px;text-align:center;">单一BIN异常监控</caption>
+        <thead>
+        <tr>
+            <th width="40px">
+
+            </th>
+            <th width="30px">
+                NO
+            </th>
+            <th width="px">
+                <label class="require">工程code</label>
+            </th>
+            <th width="px">
+                <label class="require">Bin</label>
+            </th>
+            <th width="px">
+                <label class="require">比较符</label>
+            </th>
+            <th width="px">
+                <label class="require">比较值</label>
+            </th>
+            <th width="30px">
+
+            </th>
+            <th width="30px">
+
+            </th>
+        </tr>
+        </thead>
+        <tbody class="repeat repeat-editMe4" data-repeat-index="0">
+        
+        </tbody>
+    </table>
+    <div class="repeat-add-row repeat-add-row-editMe4">
+        <a href="javascript:;" class="repeat-add" data-repeat="tmpl-repeat-editMe4"></a>
+    </div>
+    </div>
+
+    <div class="dut-watch">
+    <input type="hidden" name="detailDutWiCode"/>
+    <input type="hidden" name="detailDutWiBin"/>
+    <input type="hidden" name="detailDutWiPattern"/>
+    <input type="hidden" name="detailDutWiValue"/>
+
+    <table class="list-grid">
+        <caption style="color:#fff;background-color:#3F7FBF;width:200px;border-radius:5px 5px 0 0;font-size:16px;padding:5px;text-align:center;">DUT间差异常监控</caption>
+        <thead>
+        <tr>
+            <th width="40px">
+
+            </th>
+            <th width="30px">
+                NO
+            </th>
+            <th width="px">
+                <label class="require">工程code</label>
+            </th>
+            <th width="px">
+                <label class="require">Bin</label>
+            </th>
+            <th width="px">
+                <label class="require">比较符</label>
+            </th>
+            <th width="px">
+                <label class="require">比较值</label>
+            </th>
+            <th width="30px">
+
+            </th>
+            <th width="30px">
+
+            </th>
+        </tr>
+        </thead>
+        <tbody class="repeat repeat-editMe5" data-repeat-index="0">
+        
+        </tbody>
+    </table>
+    <div class="repeat-add-row repeat-add-row-editMe5">
+        <a href="javascript:;" class="repeat-add" data-repeat="tmpl-repeat-editMe5"></a>
+    </div>
+    </div>
+
+    <div class="yield-watch">
+    <input type="hidden" name="detailYieldWiCode"/>
+    <input type="hidden" name="detailYieldWiBin"/>
+    <input type="hidden" name="detailYieldWiPattern"/>
+    <input type="hidden" name="detailYieldWiValue"/>
+
+    <table class="list-grid">
+        <caption style="color:#fff;background-color:#3F7FBF;width:200px;border-radius:5px 5px 0 0;font-size:16px;padding:5px;text-align:center;">
+            
+                良率及其他特殊监控
+            
+            
+        </caption>
+        <thead>
+        <tr>
+            <th width="40px">
+
+            </th>
+            <th width="30px">
+                NO
+            </th>
+            <th width="px">
+                <label>工程code</label>
+            </th>
+            <th width="px">
+                <label>Bin</label>
+            </th>
+            <th width="px">
+                <label>比较符</label>
+            </th>
+            <th width="px">
+                <label>比较值</label>
+            </th>
+            <th width="30px">
+
+            </th>
+            <th width="30px">
+
+            </th>
+        </tr>
+        </thead>
+        <tbody class="repeat repeat-editMe6" data-repeat-index="0">
+        
+        </tbody>
+    </table>
+    <div class="repeat-add-row repeat-add-row-editMe6">
+        <a href="javascript:;" class="repeat-add" data-repeat="tmpl-repeat-editMe6"></a>
+    </div>
+    </div>
+</div>
+                    
+
+
+<h3 class="fold-hd">
+    <a href="javascript:;" class="hd-icon-text">其他</a>
+</h3>
+<div class="fold-cnt">
+    <table class="form-grid">
+        <tbody>
+        <tr class="placeholder">
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>
+                <label>备注</label>
+            </th>
+            <td colspan="3">
+                <textarea name="formDTO.form.otherRemark" class="textarea"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label>附件</label>
+            </th>
+            <td colspan="3">
+                <input type="hidden" name="attachOtherV"/>
+                
+                
+
+
+
+
+
+
+
+
+
+<div class="upload-multiple-file"
+	data-add-url="http://172.28.208.145/attach/web/attachment/attach.do?request_locale=zh_CN&type=AttachOther&exts=&processId=OMFProcess"
+	data-delete-url="http://172.28.208.145/attach/web/common/attachment!delete.do"
+	data-download-url="http://172.28.208.145/attach/web/attachment/download/attach.do?id={id}">
+	<a href="javascript:;" class="add-file">上传附件</a>
+	<ul class="file-list">
+		
+		
+	</ul>
+	<input name="attachIds" type="hidden" value="" id="AttachmentAttachOther" >
+</div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3 class="fold-hd">
+    <a href="javascript:;" class="hd-icon-text">反馈信息</a>
+</h3>
+
+<div class="fold-cnt">
+    <table class="form-grid">
+        <tbody>
+        <tr class="placeholder">
+            <th></th>
+            <td></td>
+            <th></th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>
+                <label>备注</label>
+            </th>
+            <td colspan="3">
+                <textarea data-name="remark" name="formDTO.form.feedRemark" class="textarea" readonly></textarea>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+                </div>
+
+                <!-- 审批栏 -->
+                
+
+
+
+
+
+
+
+
+<div>
+    <h3 class="fold-hd"><a href="javascript:;" class="hd-icon-text">审批栏</a>
+    </h3>
+    <div class="fold-cnt audit-decision">
+        <table class="form-grid form-grid-audit-info">
+            <tr>
+                <th>
+                    <label>备注</label>
+                </th>
+                <td>
+                    <textarea class="textarea" name="taskInfo.comments"></textarea>
+                </td>
+            </tr>
+        </table>
+        
+
+
+
+
+
+
+
+
+<table class="form-grid form-grid-audit-info">
+    <tr>
+        <th>
+            <label class="person">当前审批人</label>
+        </th>
+        <td>
+            邵文怡,Sophia Shao(000955)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            <label class="activity">当前状态</label>
+        </th>
+        <td>
+            Create
+        </td>
+    </tr>
+</table>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+                   
+<h3 class="fold-hd">
+	<a href="javascript:;" class="hd-icon-text">历史审批记录</a>
+</h3>
+<div class="fold-cnt audit-history-list">
+	<div style="left:auto; top:-20px; right:0px; position: absolute; display:none;">
+		<a href="http://172.28.208.145/org/web/common/workspace/process-flow-img.do?instanceId=" target="_blank"><i class="icon-list-20"></i>查看流程图</a>
+	</div>
+	<div class="audit-history-list-switch d-n">
+	    <a href="javascript:;" class="switch-list"><i class="icon-sort-20"></i>审批时间排序</a>
+	    <a href="javascript:;" class="switch-dept"><i class="icon-list-20"></i>部门分类排序</a>
+	</div>
+
+	<table class="list-grid list-grid-audit-history list-grid-highlight list-grid-dept" >
+		<thead>
+		    <th width="200px">节点</th>
+		    <th width="200px">姓名</th>
+		    <th width="150px">动作</th>
+		    <th width="140px">时间</th>
+		    <th>备注</th>
+		</thead>
+		
+	</table>
+
+	<table class="list-grid list-grid-audit-history list-grid-highlight list-grid-sort" >
+		<thead class="grid-hd">
+		    <th width="200px">节点</th>
+		    <th width="200px">姓名</th>
+		    <th width="150px">动作</th>
+		    <th width="140px">时间</th>
+		    <th>备注</th>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+</div>  
+</div>
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+<div class="req-oper">
+    <ul class="req-oper-list">
+        <li class="item item-submit active">
+            <a href="javascript:;"></a>
+            <div class="des">
+                <p>提交</p>
+            </div>
+        </li>
+        <li class="item item-close">
+            <a href="javascript:;"></a>
+            <div class="des">
+                <p>关闭</p>
+            </div>
+        </li>
+        
+        
+            <li class="item item-save">
+                <a href="javascript:;"></a>
+                <div class="des">
+                    <p>保存</p>
+                </div>
+            </li>
+        
+        
+        <li class="item item-top">
+            <a href="javascript:;"></a>
+            <div class="des">
+                <p>TOP</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+    </form>
+</div>
+</body>
+
+<script>
+    var _selectorTypeCustom =
+    {
+        'Ben':
+        {
+            ctx : window['ctx'],
+//            url : '/web/common/omf-select!ben.do',
+            url : '/web/common/eng-in-select!selectBen.do',
+            isMultiple : false,
+            size :
+            {
+                width : 650,
+                height : 606
+            }
+        },
+        'Iec':
+        {
+            ctx : window['ctx'],
+            url : '/web/common/eng-in-select!selectDccIec.do',
+            isMultiple : false,
+            size :
+            {
+                width : 650,
+                height : 606
+            }
+        },
+        'Pbr':
+        {
+            ctx : window['ctx'],
+            url : '/web/common/eng-in-select!selectPbr.do',
+            isMultiple : false,
+            size :
+            {
+                width : 650,
+                height : 606
+            }
+        }
+    }
+</script>
+
+<script type="application/javascript">
+    function callBackBen(args, actionType, items){
+        //选择弹出框中的值
+        if(items != null && items.length >0 ){
+            var division = items[0]['basicName'];
+            var productCode = items[0]['productCode'];
+            $("[name='formDTO.divisions["+ actionType +"].divisionName").val(division);
+            $("[name='formDTO.divisions["+ actionType +"].isFromBen").val("Y"); //只读
+            $("[name='formDTO.divisions["+ actionType +"].productCode").val(productCode); //只读
+            $("[name='formDTO.divisions["+ actionType +"].productCode").prop("readonly", true);
+        }
+        //未选择弹出框，手动输入：产品编码可以手动输入
+        else{
+            $("[name='formDTO.divisions["+ actionType +"].isFromBen").val("N"); //只读
+            $("[name='formDTO.divisions["+ actionType +"].productCode").prop("readonly", false);
+        }
+        allDiv = getDivisions();
+    }
+
+    function callBackIec(args, actionType, items){
+        if(items != null && items.length >0 ){
+            var _requestNo = items[0]['requestNo'];
+            var _id = items[0]['value'];
+            $("[data-name='iecReqNo']").val(_requestNo);
+            $("[data-name='iecId']").val(_id);
+            $("[data-name='copyIecReqNo']").val(_requestNo);
+        }else{
+            $("[data-name='iecReqNo']").val("");
+            $("[data-name='iecId']").val("");
+            $("[data-name='copyIecReqNo']").val("");
+        }
+    }
+
+    function changeIec(){
+        var _reqNo = $("[data-name='iecReqNo']").val();
+        var _copy = $("[data-name='copyIecReqNo']").val();
+        if(_copy != _reqNo){
+            $("[data-name='iecId']").val("");
+        }
+    }
+
+    function callBackPro(args, actionType, items){
+        if(items != null && items.length >0 ){
+            var _proName = items[0]['label'];
+            var _proId = items[0]['value'];
+            $("[name='formDTO.pws["+ actionType +"].productName").val(_proName);
+            $("[name='formDTO.pws["+ actionType +"].productId").val(_proId);
+            $("[data-name='pwsCopyProName_"+actionType+"']").val(_proName);
+        }
+        else{
+            $("[name='formDTO.pws["+ actionType +"].productName").val("");
+            $("[name='formDTO.pws["+ actionType +"].productId").val("");
+            $("[data-name='pwsCopyProName_"+actionType+"']").val("");
+        }
+    }
+
+    function changePbr(idx){
+        var _proName = $("[name='formDTO.pws["+ idx +"].productName").val();
+        var _copy = $("[data-name='pwsCopyProName_"+idx+"']").val();
+        if(_proName != _copy){
+            $("[name='formDTO.pws["+ idx +"].productId").val("");
+        }
+    }
+
+    function ajaxProductCode(baseProdName){
+        var retVal = "";
+        $.ajax({
+            cache: true,
+            type: "POST",
+            url:"/engin/web/form/omf/online-mosfet!ajaxGetProductCode.do",
+            data:{
+                base : baseProdName
+            },
+            async: false,
+            success: function(data) {
+                retVal = data;
+            }
+        });
+        return retVal;
+    }
+
+    function ajaxIsDivision(obj){
+        if("" != obj.value){
+            var idx = $(obj).parent().parent().attr("data-repeat-index");
+            var productCode = "";
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/engin/web/form/omf/online-mosfet!ajaxIsDivision.do",
+                data:{
+                    base : obj.value
+                },
+                async: false,
+                success: function(data) {
+                    if("Y" == data){
+                        productCode = ajaxProductCode(obj.value);
+                        $("[name='formDTO.divisions["+ idx +"].isFromBen']").val("Y");
+                        $("[name='formDTO.divisions["+ idx +"].productCode']").prop("readonly", true);
+                    }else if("N" == data){
+                        $("[name='formDTO.divisions["+ idx +"].isFromBen']").val("N");
+                        $("[name='formDTO.divisions["+ idx +"].productCode']").prop("readonly", false);
+                    }
+                    $("[name='formDTO.divisions["+ idx +"].productCode']").val(productCode);
+                }
+            });
+        }
+        allDiv = getDivisions();
+    }
+
+    function setLastDivision(){
+        var _paramVal = getDivisions();
+        $("[name='formDTO.form.lastDivision']").val(_paramVal);
+    }
+
+    function getDivisions(){
+        var _paramVal = "";
+        $("[data-name = 'divDivisionName']").each(function(){
+            _paramVal += $(this).val() + ","
+        });
+        return _paramVal;
+    }
+
+    function ajaxLoadRelatedForms(_omfType, _paramVal){
+        var formLen = 0;
+        $.ajax({
+            cache: true,type: "POST",url:"/engin/web/form/omf/online-mosfet!ajaxLoadRelatedForms.do",
+            data:{
+                omfType : _omfType,
+                paramVal : _paramVal
+            },async: false,dataType:"text",
+            success: function(data) {
+                formLen = data;
+            }
+        });
+        return formLen;
+    }
+
+    function getParamVal(_omfType){
+        var _paramVal = "";
+        if("NP" == _omfType || "PU" == _omfType){
+            $("[data-name = 'divDivisionName']").each(function(){
+                _paramVal += $(this).val() + ","
+            });
+        }else if("SP" == _omfType){
+            $("[data-name ='lotsLotId']").each(function(){
+                _paramVal += $(this).val() + ","
+            });
+        }
+        return _paramVal;
+    }
+
+    function openTemplates(){
+        var div = getDivisions();
+        $('input[name="formDTO.form.lastDivision"]').val(div);
+        if("" == div || "," == div){
+            alert("请先填写基地品名信息");
+            return;
+        }
+        $.dialog('open',
+                {
+                    name : 'related-templates'+allDiv,
+                    title : '相关模板',
+                    width: 550,
+                    height: 300,
+                    src : "/engin/web/form/omf/dialog/dialog!template.do?paramVal=" + allDiv,
+                    buttons:
+                    {
+                        "confrim":
+                        {
+                            'text':'提交',
+                            'class':'button',
+                            'click' :function()
+                            {
+                                var _obj = window.frames[window.frames.length - 1].getSelected();
+                                if(_obj.val()){
+                                    initExceptionByWatch(_obj.val());
+                                    $(this).dialog('close');
+                                }else{
+                                    alert("请选择任意一条");
+                                }
+                            }
+                        },
+                        "abnormal":
+                        {
+                            'text':'关闭',
+                            'class':'button abnormal',
+                            'click':function()
+                            {
+                                window.frames[0].clearSelected();
+                                $(this).dialog('close');
+                            }
+                        }
+                    }
+                });
+    }
+
+    function compareDivision(){
+        var _lastDivision = $('input[name="formDTO.form.lastDivision"]').val();
+        var _newDivsion = getDivisions();
+        if(""!= _lastDivision && _lastDivision != _newDivsion){
+            if(confirm("基地品名发生变化，是否重新加载监控数据？")){
+                openTemplates();
+                return false;
+            }
+        }
+    }
+
+    function openRelatedForms(omfType, paramVal){
+        $.dialog('open',
+                {
+                    name : 'related-forms',
+                    title : '被关联Lot ID申请单',
+                    src : "/engin/web/form/omf/dialog/dialog.do?omfType="+omfType+"&paramVal="+paramVal,
+                    width: 600,
+                    height: 300,
+                    buttons:
+                    {
+                        "confrim":
+                        {
+                            'text':'提交',
+                            'class':'button',
+                            'click' :function()
+                            {
+                                var ret = window.frames[window.frames.length - 1].getAllChecked();
+                                if(ret){
+                                    var objArr = window.frames[window.frames.length - 1].getSelected();
+                                    initPOItem(objArr);
+                                    $(this).dialog('close');
+                                    $.loading(_lang['submiting']);
+                                    $("#requrest-form").submit();
+                                }else{
+                                    alert("必须选择原始操作");
+                                }
+                            }
+                        },
+                        "abnormal":
+                        {
+                            'text':'关闭',
+                            'class':'button abnormal',
+                            'click':function()
+                            {
+                                window.frames[0].clearSelected();
+                                $(this).dialog('close');
+                            }
+                        }
+                    }
+                });
+    }
+
+    function initPOItem(objArr){
+        var trHtml = "";
+        for(var i=0;i<objArr.length;i++){
+            var tr='<tr><td>'+ (i+1) + '</td>' +
+                    '<td>'+objArr[i][0]+'<input name="formDTO.relLots['+i+'].requestNo" value="'+ objArr[i][0]+'" type="hidden"/></td>' +
+                    '<td>'+objArr[i][1]+'<input name="formDTO.relLots['+i+'].requester.id" value="'+ objArr[i][4]+'" type="hidden"/></td>' +
+                    '<td>'+objArr[i][2]+'<input name="formDTO.relLots['+i+'].lotId" value="'+ objArr[i][2]+'" type="hidden"/></td>' +
+                    '<td>'+objArr[i][3]+'<input name="formDTO.relLots['+i+'].relFormId" value="'+ objArr[i][3]+'" type="hidden"/></td>' +
+                    '<td>'+objArr[i][5]+'<input name="formDTO.relLots['+i+'].originOper" value="'+ objArr[i][5]+'" type="hidden"/></td></tr>' ;
+            trHtml += tr;
+        }
+
+        $(".related-lot").empty().html(trHtml);
+    }
+
+    function initExceptionByType(objArr){
+        var binHtml="",dutHtml="",liHtml="",binArr = new Array(),dutArr = new Array(),liArr = new Array();
+        for(var i=0;i<objArr.length;i++){
+            var tr = "";
+            if(undefined == objArr[i][5] ||"删除" == objArr[i][5]) continue;
+            if("单一BIN异常监控" == objArr[i][0]){
+                binArr.push(objArr[i]);
+            }else if("DUT间差异常监控" == objArr[i][0]){
+                dutArr.push(objArr[i]);
+            }else if("良率监控" == objArr[i][0]){
+                liArr.push(objArr[i]);
+            }
+        }
+        for(var i=0;i<binArr.length;i++){
+            var tr = '<tr class="repeat-item"><td></td><td class="repeat-no">'+ (i+1) +'</td>' +
+                        '<td><input data-name="singleWiCode" name="formDTO.singles['+ i +'].wiCode" value="'+ binArr[i][1] +'" type="text" class="text"></td>' +
+                        '<td><input data-name="singleWiBin" name="formDTO.singles['+ i +'].wiBin" value="'+ binArr[i][2] +'" type="text" class="text"></td>' +
+                        '<td><select data-name="singleWiPattern" name="formDTO.singles['+ i +'].wiPattern" class="select"><option value=""></option>' +
+                        '<option value=">" title=">" '+ getSelectedOption('>', binArr[i][3])+'>></option>' +
+                        '<option value="<" title="<" '+ getSelectedOption('<', binArr[i][3])+'><</option>' +
+                        '<option value=">=" title=">=" '+ getSelectedOption('>=', binArr[i][3])+'>>=</option>' +
+                        '<option value="<=" title="<=" '+ getSelectedOption('<=', binArr[i][3])+'><=</option></select></td>' +
+                        '<td><input data-name="singleWiValue" name="formDTO.singles['+ i +'].wiValue" value="'+ binArr[i][4] +'" type="text" class="text" style="width:90%" data-flag="digital.3"/>' +
+                        '<span style="padding-left:3px;"></span>' +
+                        '<input name="formDTO.singles['+ i +'].wiType" value="SINGLE" type="hidden"/></td>' +
+                        '<td><a href="javascript:;" class="repeat-remove icon-delete-20"></a></td><td></td></tr>';
+            binHtml += tr;
+        }
+        for(var i=0;i<dutArr.length;i++){
+            var tr = '<tr class="repeat-item"><td></td><td class="repeat-no">'+ (i+1) +'</td>' +
+                    '<td><input data-name="dutWiCode" name="formDTO.duts['+ i +'].wiCode" value="'+ dutArr[i][1] +'" type="text" class="text"></td>' +
+                    '<td><input data-name="dutWiBin" name="formDTO.duts['+ i +'].wiBin" value="'+ dutArr[i][2] +'" type="text" class="text"></td>' +
+                    '<td><select data-name="dutWiPattern" name="formDTO.duts['+ i +'].wiPattern" class="select"><option value=""></option>' +
+                    '<option value=">" title=">" '+ getSelectedOption('>', dutArr[i][3])+'>></option>' +
+                    '<option value="<" title="<" '+ getSelectedOption('<', dutArr[i][3])+'><</option>' +
+                    '<option value=">=" title=">=" '+ getSelectedOption('>=', dutArr[i][3])+'>>=</option>' +
+                    '<option value="<=" title="<=" '+ getSelectedOption('<=', dutArr[i][3])+'><=</option></select></td>' +
+                    '<td><input data-name="dutWiValue" name="formDTO.duts['+ i +'].wiValue" value="'+ dutArr[i][4] +'" type="text" class="text" style="width:90%" data-flag="digital.3"/>' +
+                    '<span style="padding-left:3px;">%</span>' +
+                    '<input name="formDTO.duts['+ i +'].wiType" value="DUT" type="hidden"/></td>' +
+                    '<td><a href="javascript:;" class="repeat-remove icon-delete-20"></a></td><td></td></tr>';
+            dutHtml += tr;
+        }
+        for(var i=0;i<liArr.length;i++){
+            var tr = '<tr class="repeat-item"><td></td><td class="repeat-no">'+ (i+1) +'</td>' +
+                    '<td><input data-name="yieldWiCode" name="formDTO.yields['+ i +'].wiCode" value="'+ liArr[i][1] +'" type="text" class="text"></td>' +
+                    '<td><input data-name="yieldWiBin" name="formDTO.yields['+ i +'].wiBin" value="'+ liArr[i][2] +'" type="text" class="text"></td>' +
+                    '<td><select data-name="yieldWiPattern" name="formDTO.yields['+ i +'].wiPattern" class="select"><option value=""></option>' +
+                    '<option value=">" title=">" '+ getSelectedOption('>', liArr[i][3])+'>></option>' +
+                    '<option value="<" title="<" '+ getSelectedOption('<', liArr[i][3])+'><</option>' +
+                    '<option value=">=" title=">=" '+ getSelectedOption('>=', liArr[i][3])+'>>=</option>' +
+                    '<option value="<=" title="<=" '+ getSelectedOption('<=', liArr[i][3])+'><=</option></select></td>' +
+                    '<td><input data-name="yieldWiValue" name="formDTO.yields['+ i +'].wiValue" value="'+ liArr[i][4] +'" type="text" class="text" style="width:90%" data-flag="digital.3"/>' +
+                    '<span style="padding-left:3px;">%</span>' +
+                    '<input name="formDTO.yields['+ i +'].wiType" value="YEILD" type="hidden"/></td>' +
+                    '<td><a href="javascript:;" class="repeat-remove icon-delete-20"></a></td><td></td></tr>';
+            liHtml += tr;
+        }
+        $(".repeat-editMe4").empty().html(binHtml);
+        $(".repeat-editMe5").empty().html(dutHtml);
+        $(".repeat-editMe6").empty().html(liHtml);
+    }
+
+    function initExceptionByWatch(tempId){
+        $.ajax({
+            cache: true,type: "POST",url:"/engin/web/form/omf/online-mosfet!ajaxLoadTemplate.do",
+            data:{
+                templateId : tempId,
+            },async: false,dataType:"json",
+            success: function(data) {
+                $(".repeat-editMe4").empty();
+                $(".repeat-editMe5").empty();
+                $(".repeat-editMe6").empty();
+                if(data){
+                    $(".repeat-editMe4").html(data.sinHtml);
+                    $(".repeat-editMe5").html(data.dutHtml);
+                    $(".repeat-editMe6").html(data.liHtml);
+                }
+            }
+        });
+    }
+
+    function getSelectedOption(pattern, val){
+        if(pattern == val) return 'selected';
+        return '';
+    }
+
+    function isOmfNp(){
+        var _omfType = $("[data-name='omfType']").val();
+        return "NP" == _omfType ;
+    }
+
+    function isOmfMc(){
+        var _omfType = $("[data-name='omfType']").val();
+        return "MC" == _omfType ;
+    }
+
+    function isOmfNotMc(){
+        var _omfType = $("[data-name='omfType']").val();
+        return "NP" == _omfType || "PU" == _omfType || "SP" == _omfType;
+    }
+
+    function isOmfPu(){
+        var _omfType = $("[data-name='omfType']").val();
+        return "PU" == _omfType;
+    }
+
+    function isOmfNPPU(){
+        var _omfType = $("[data-name='omfType']").val();
+        return "NP" == _omfType || "PU" == _omfType;
+    }
+
+    function isOmfSP(){
+        var _omfType = $("[data-name='omfType']").val();
+        return "SP" == _omfType;
+    }
+
+    function isSampM(){
+        var _sample = $("[data-name='sample']").val();
+        return "M" == _sample;
+    }
+
+    function isSampNotS(){
+        var _omfType = $("[data-name='omfType']").val();
+        var _sample = $("[data-name='sample']").val();
+        return "S" != _sample && ("NP" == _omfType || "PU" == _omfType || "SP" == _omfType);
+    }
+
+    function isSampNotSOmfSP(){
+        var _omfType = $("[data-name='omfType']").val();
+        var _sample = $("[data-name='sample']").val();
+        return "S" != _sample && "SP" == _omfType;
+    }
+
+    function isSampMOmfSP(){
+        var _omfType = $("[data-name='omfType']").val();
+        var _sample = $("[data-name='sample']").val();
+        return "SP" == _omfType && "M" == _sample;
+    }
+
+    function isSampNotSMapY(){
+        var _sample = $("[data-name='sample']").val();
+        var _map = $("[data-name='mapMerge']").val();
+        return "S" != _sample && "Y" == _map;
+    }
+
+    function isWathNotHas(){
+        var _watch = $('[data-name="watchSelect"]').val();
+        return "已有量产品名监控，可同量产设定" != _watch;
+    }
+
+    function isOnlineWatchNotHas(){
+        var _watch = $('[data-name="watchSelect"]').val();
+        return "已有量产品名监控，可同量产设定" != _watch && 'MOSFET' == 'MOSFET';
+    }
+
+    function blurLotId(idx){
+        var _lotId = $("[name='formDTO.lots["+ idx +"].lotId']").val();
+        if(undefined != _lotId && _lotId.length == 11) {
+            $("[name='formDTO.lots["+ idx +"].isExtends']").val("N");
+            $("input[data-name='cIsExt_"+ idx +"']").attr("disabled","disabled");
+            $("input[data-name='cIsExt_"+ idx +"'][value='N']").prop("checked","checked");
+        }else{
+            $("[name='formDTO.lots["+ idx +"].isExtends']").val("");
+            $("input[data-name='cIsExt_"+ idx +"']:checked").removeAttr("checked");
+            $("input[data-name='cIsExt_"+ idx +"']").removeAttr("disabled");
+        }
+    }
+
+    function clickIsExt(idx){
+        var _isExt = $("[name='cnIsExt_"+ idx +"']:checked").val();
+        $("[name='formDTO.lots["+ idx +"].isExtends']").val(_isExt);
+    }
+
+    function clickIsExec(idx){
+        var _isExec = $("[name='rnIsExec_"+ idx +"']:checked").val();
+        $("[name='formDTO.relLots["+ idx +"].isExec']").val(_isExec);
+    }
+
+    function clickFeed(idx){
+        var _isFeed = $("[name='rnFeed_"+ idx +"']:checked").val();
+        $("[name='formDTO.relLots["+ idx +"].feedbackOper']").val(_isFeed);
+    }
+
+    function validateLotOnly(){
+        var exsitLotArr = new Array();
+        if(isOmfSP()){
+            var _isOnly = "";
+            var _paramVal = "";
+            $("[data-name = 'lotsLotId']").each(function(){
+                _paramVal += $(this).val() + ","
+            });
+            $.ajax({
+                cache: true,type: "POST",url:"/engin/web/form/omf/online-mosfet!ajaxValiLotSpOnly.do",
+                data:{
+                    formId : '',
+                    paramVal : _paramVal
+                },
+                async: false,dataType:"text",
+                success: function(data) {
+                    if("" != data && undefined != data.split(",")){
+                        var _arr = data.split(",");
+                        for(var i=0; i<_arr.length; i++){
+                            if("" != _arr[i] && !exsitLotArr.contains(_arr[i])) exsitLotArr.push(_arr[i]);
+                        }
+                    }
+                }
+            });
+        }
+        return exsitLotArr;
+    }
+
+    //数字48-57 大写字母65-90 小写字母97-122
+    //中杠- 45 星号42
+    function checkLotAscii(data){
+        var flag = true;
+        $.each(data.split(''), function(index, value){
+            var code = value.charCodeAt();
+            var notNo = +code < 48 || +code >57;
+            var notUp = +code < 65 || +code > 90;
+            var notLow = +code < 97 || +code > 122;
+            var notMG = +code != 45;
+            if(notNo && notUp && notLow && notMG) {
+                flag = false;
+                return;
+            }
+        });
+        return flag;
+    }
+
+    Array.prototype.contains = function(obj) {
+        var i = this.length;
+        while (i--) {
+            if (this[i] === obj) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+</script>
+
+
+<script type="application/javascript">
+    function loadScript(){
+        var _formType = '';
+        if("" == _formType){
+            //弹出向导
+            var createGuideDialog = $.dialog('open',
+                    {
+                        name : 'create-guide',
+                        title : '选择Online依赖类型：',
+                        html : $('#yzsq-guide').html(),
+                        width : 240,
+                        height : 210,
+                        frameScrolling : 'no'
+                    });
+            //隐藏弹出框标题块
+            $(".ui-widget-header").hide();
+            //打开
+            createGuideDialog.dialog('open');
+            $(".yzsq-guide").tip("请选择Online依赖类型！");
+            $(document).delegate(".yzsq-guide ul li","click",function(){
+                createGuideDialog.dialog('close');
+                $("."+$(this).attr("data-flag")).show();
+                _formType = $(this).attr("data-flag");
+                loadNextStep(_formType);
+            });
+        }
+        loadNextStep(_formType);
+
+        //单步时不显示
+        $('[data-name="sample"]').change(function(){
+            sampToggle();
+            mapTargetShow();
+        });
+
+        $('[data-name="mapMerge"]').change(function(){
+            mapToggle();
+            mapTargetShow();
+        });
+
+        $('[data-name="watchSelect"]').change(function(){
+            watchToggle();
+        });
+
+        sampToggle();
+        mapToggle();
+        mapTargetShow();
+        watchToggle();
+    }
+
+    function watchToggle(){
+        var _watch = $('[data-name="watchSelect"]').val();
+        $('.monitoring-data-loading, .single-watch, .dut-watch, .yield-watch').toggle("已有量产品名监控，可同量产设定" != _watch);
+    }
+
+    function sampToggle(){
+        var val = $('[data-name="sample"]').val();
+        if('MOSFET' == 'MOSFET'){
+            if(val == "S"){
+                $(":input[data-name='pwsCode']").val("");
+                $(":input[data-name='pwsIecPw']").val("");
+                $(":input[data-name='pwsProductName']").val("");
+                $(":input[data-name='pwsProductId']").val("");
+                $(":input[data-name='mapMerge']").val("");
+                $(":input[data-name='mapsTargetCode']").val("");
+                $(":input[data-name='mapsComposeCode']").val("");
+            }else{
+                 $(":input[data-name='pwsIecPw']").val("同量产");
+                 $(":input[data-name='pwsProductName']").val("同量产");
+                 $(":input[data-name='pwsProductId']").val("同量产");
+                 $(":input[data-name='mapMerge']").val("同量产");
+                 $(":input[data-name='mapsTargetCode']").val("同量产");
+                 $(":input[data-name='mapsComposeCode']").val("同量产");
+            }
+        };
+        $('.flow-iec, .map').toggle(val != "S");
+    }
+
+    function mapToggle(){
+        var val = $('[data-name="mapMerge"]').val();
+        $('.map-target-compose').toggle(val == "Y");
+    }
+
+    function mapTargetShow(){
+        var val1 = $('[data-name="mapMerge"]').val(),
+                val2 = $('[data-name="sample"]').val();
+        $('.map-target-compose').toggle(val1 == "Y" &&  val2 != "S");
+    }
+
+    function loadNextStep(type){
+        var _procc = "";
+        if( type === "NP"){
+            $('.new-program-into-mass-production, .associated-with-lotid, .iec-dcc, .sample-selection, .wits-setting').show();
+            $("#omfType").html("新程序导入量产");
+            $("[data-name='omfType']").val("NP");
+            $("[name='taskInfo.processId']").val("NPSProcess");
+        }
+        else if(type === "PU"){
+            $('.program-upgrade, .associated-with-lotid, .iec-dcc, .sample-selection, .wits-setting').show();
+            $("#omfType").html("程序升级");
+            $("[data-name='omfType']").val("PU");
+            $("[name='taskInfo.processId']").val("NPSProcess");
+        }
+        else if(type === "MC"){
+            $('.wits-monitor-setting').show();
+            $("#omfType").html("WITS监控设定");
+            $("[data-name='omfType']").val("MC");
+            $("[name='taskInfo.processId']").val("WITSProcess");
+        }
+        else if(type === "SP"){
+            $("#omfType").html("小批量制品特殊测试");
+            $("[data-name='omfType']").val("SP");
+            $('.special-test-for-small-lot-products, .lot-id, .associated-with-lotid, .wits-setting, .flow-iec, .have-sp, .monitoring-selection').show();
+            $('.repeat-editMe2').removeClass("have-show");
+            $('.sample-selection').hide();
+            $("[name='taskInfo.processId']").val("NPSProcess");
+        }
+    }
+</script>
+
+<script id="tmpl-repeat-editMe" type="text/repeat">
+	<code>
+		<tr class="repeat-item" data-repeat-index="{#index#}">
+			<td>
+
+			</td>
+			<td class="repeat-no">
+				1
+			</td>
+			<td>
+				<input data-name="divDivisionName" name="formDTO.divisions[{#index#}].divisionName" type="text" class="text" onblur="ajaxIsDivision(this);" style="width:80%">
+				<div title="基地品名" class="text-icon-selector" style="width: 1px; height: 20px;line-height:20px; display: inline-block;" readonly="readonly" data-action-type="Ben-{#index#}@callBackBen"/>
+				<input data-name="divIsFromBen" name="formDTO.divisions[{#index#}].isFromBen" type="hidden" />
+			</td>
+			<td>
+				<textarea data-name="divProductCode" name="formDTO.divisions[{#index#}].productCode" class="textarea Adaptive-textarea"></textarea>
+			</td>
+			<td>
+				<a href="javascript:;" class="repeat-remove icon-delete-20"></a>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+	</code>
+	var setting =
+	{
+		repeat : '.repeat-editMe',
+		min : 1,
+		max : 10,
+		init : 1,
+		onMin : function(sender)
+		{
+			$.microTip(
+			{
+				message : '至少需要一行记录.'
+			},sender);
+		},
+		onRemoveBefore : function($item,sender)
+		{
+			var _this = this;
+			$.microConfirm(
+			{
+				message : '确定删除?',
+				confrim : '确定',
+				cancel : '取消',
+				onConfirm : function()
+				{
+					_this.remove($item, sender);
+				}
+			}, sender);
+		}
+	};
+</script>
+
+<script id="tmpl-repeat-editMe1" type="text/repeat">
+	<code>
+		<tr class="repeat-item" data-repeat-index="{#index#}">
+			<td>
+
+			</td>
+			<td class="repeat-no">
+				1
+			</td>
+			<td>
+				<input data-name="lotsLotId" name="formDTO.lots[{#index#}].lotId" type="text" class="text" onblur="blurLotId({#index#})" />
+			</td>
+			<td>
+				<div class="radio-groups">
+					<label>
+						<input data-name="cIsExt_{#index#}" name="cnIsExt_{#index#}" type="radio" value="Y" onclick="clickIsExt({#index#})">是
+					</label>
+						<label>
+						<input data-name="cIsExt_{#index#}" name="cnIsExt_{#index#}" type="radio" value="N" onclick="clickIsExt({#index#})">否
+					</label>
+					<input type="hidden" data-name="lotsIsExtends" name="formDTO.lots[{#index#}].isExtends"/>
+				</div>
+			</td>
+			<td>
+
+			</td>
+			<td>
+				<a href="javascript:;" class="repeat-remove icon-delete-20"></a>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+	</code>
+	var setting =
+	{
+		repeat : '.repeat-editMe1',
+		min : 1,
+		max : 10,
+		init : 1,
+		onMin : function(sender)
+		{
+			$.microTip(
+			{
+				message : '至少需要一行记录.'
+			},sender);
+		},
+		onRemoveBefore : function($item,sender)
+		{
+			var _this = this;
+			$.microConfirm(
+			{
+				message : '确定删除?',
+				confrim : '确定',
+				cancel : '取消',
+				onConfirm : function()
+				{
+					_this.remove($item, sender);
+				}
+			}, sender);
+		}
+	};
+</script>
+
+<script id="tmpl-repeat-editMe2" type="text/repeat">
+	<code>
+		<tr class="repeat-item" data-repeat-index="{#index#}">
+			<td class="repeat-no">
+				1
+			</td>
+			<td>
+			    <input data-name="pwsCode" name="formDTO.pws[{#index#}].code" type="text" class="text" value=""/>
+			</td>
+			<td>
+				<input data-name="pwsIecPw" name="formDTO.pws[{#index#}].iecPw" type="text" class="text" value="{#default#}"/>
+			</td>
+			<td>
+				<input data-name="pwsProductName" name="formDTO.pws[{#index#}].productName" type="text" class="text" onblur="changePbr({#index#});" style="width: 80%" value="{#default#}"/>
+				<div title="品种参数名" class="text-icon-selector" style="width: 1px; height: 20px;line-height:20px; display: inline-block;" readonly="readonly" data-action-type="Pbr-{#index#}@callBackPro">
+                <input data-name="pwsProductId" name="formDTO.pws[{#index#}].productId" type="hidden"/>
+                <input data-name="pwsCopyProName_{#index#}" type="hidden"/>
+			</td>
+			<td class="have-sp">
+				<input data-name="pwsProbeCartPicNo" name="formDTO.pws[{#index#}].probeCartPicNo" type="text" class="text" value="{#default#}"/>
+			</td>
+			<td class="have-sp">
+				<input data-name="pwsTestBaseNo" name="formDTO.pws[{#index#}].testBaseNo" type="text" class="text" value="{#default#}"/>
+			</td>
+			<td class="have-sp">
+				<input data-name="pwsTemperature" name="formDTO.pws[{#index#}].temperature" type="text" class="text" value="{#default#}"/>
+			</td>
+			<td class="have-sp">
+				<input data-name="pwsTestPlatform" name="formDTO.pws[{#index#}].testPlatform" type="text" class="text" value="{#default#}"/>
+			</td>
+			<td class="have-sp">
+				<input data-name="pwsDirectory" name="formDTO.pws[{#index#}].directory" type="text" class="text" value="{#default#}"/>
+			</td>
+			<td class="have-sp">
+				<input data-name="pwsProgName" name="formDTO.pws[{#index#}].progName" type="text" class="text" value="{#default#}"/>
+			</td>
+			<td>
+				<a href="javascript:;" class="repeat-remove icon-delete-20"></a>
+			</td>
+		</tr>
+	</code>
+	var setting =
+	{
+		repeat : '.repeat-editMe2',
+		min : 1,
+		max : 30,
+		init : 1,
+		onMin : function(sender)
+		{
+			$.microTip(
+			{
+				message : '至少需要一行记录.'
+			},sender);
+		},
+		onAddBefore : function($item, sender)
+		{
+		    if('MOSFET' == 'MOSFET'){
+		        this.tmpl = this.tmpl.replace(/{#default#}/g, '同量产')
+		    }else{
+		      this.tmpl = this.tmpl.replace(/{#default#}/g, '')
+		    };
+		    return true;
+		},
+		onRemoveBefore : function($item,sender)
+		{
+			var _this = this;
+			$.microConfirm(
+			{
+				message : '确定删除?',
+				confrim : '确定',
+				cancel : '取消',
+				onConfirm : function()
+				{
+					_this.remove($item, sender);
+				}
+			}, sender);
+		}
+	};
+</script>
+
+<script id="tmpl-repeat-editMe3" type="text/repeat">
+	<code>
+		<tr class="repeat-item" data-repeat-index="{#index#}">
+			<td>
+
+			</td>
+			<td class="repeat-no">
+				1
+			</td>
+			<td>
+                <input data-name="mapsTargetCode" name="formDTO.maps[{#index#}].targetCode" type="text" class="text">
+            </td>
+            <td>
+                <input data-name="mapsComposeCode" name="formDTO.maps[{#index#}].composeCode" type="text" class="text">
+            </td>
+			<td>
+				<a href="javascript:;" class="repeat-remove icon-delete-20"></a>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+	</code>
+	var setting =
+	{
+		repeat : '.repeat-editMe3',
+		min : 1,
+		max : 10,
+		init : 1,
+		onMin : function(sender)
+		{
+			$.microTip(
+			{
+				message : '至少需要一行记录.'
+			},sender);
+		},
+		onRemoveBefore : function($item,sender)
+		{
+			var _this = this;
+			$.microConfirm(
+			{
+				message : '确定删除?',
+				confrim : '确定',
+				cancel : '取消',
+				onConfirm : function()
+				{
+					_this.remove($item, sender);
+				}
+			}, sender);
+		}
+	};
+</script>
+
+<script id="tmpl-repeat-editMe4" type="text/repeat">
+	<code>
+		<tr class="repeat-item" data-repeat-index="{#index#}">
+			<td>
+
+			</td>
+			<td class="repeat-no">
+				1
+			</td>
+			<td>
+				<input data-name="singleWiCode" name="formDTO.singles[{#index#}].wiCode" type="text" class="text">
+			</td>
+			<td>
+				<input data-name="singleWiBin" name="formDTO.singles[{#index#}].wiBin" type="text" class="text">
+			</td>
+			<td>
+				<select data-name="singleWiPattern" name="formDTO.singles[{#index#}].wiPattern" class="select">
+                    <option value=""></option>
+                    <option value=">" title=">">></option>
+                    <option value="<" title="<"><</option>
+                    <option value=">=" title=">=">>=</option>
+                    <option value="<=" title="<="><=</option>
+                </select>
+			</td>
+			<td>
+				<input data-name="singleWiValue" name="formDTO.singles[{#index#}].wiValue" type="text" class="text" style="width:90%" data-flag="digital.3"/><span style="padding-left:3px;"></span>
+				<input name="formDTO.singles[{#index#}].wiType" value="SINGLE" type="hidden"/>
+			</td>
+			<td>
+				<a href="javascript:;" class="repeat-remove icon-delete-20"></a>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+	</code>
+	var setting =
+	{
+		repeat : '.repeat-editMe4',
+		min : 1,
+		max : 10,
+		init : 1,
+		onMin : function(sender)
+		{
+			$.microTip(
+			{
+				message : '至少需要一行记录.'
+			},sender);
+		},
+		onRemoveBefore : function($item,sender)
+		{
+			var _this = this;
+			$.microConfirm(
+			{
+				message : '确定删除?',
+				confrim : '确定',
+				cancel : '取消',
+				onConfirm : function()
+				{
+					_this.remove($item, sender);
+				}
+			}, sender);
+		}
+	};
+</script>
+
+<script id="tmpl-repeat-editMe5" type="text/repeat">
+	<code>
+		<tr class="repeat-item" data-repeat-index="{#index#}">
+			<td>
+
+			</td>
+			<td class="repeat-no">
+				1
+			</td>
+			<td>
+				<input data-name="dutWiCode" name="formDTO.duts[{#index#}].wiCode" type="text" class="text">
+			</td>
+			<td>
+				<input data-name="dutWiBin" name="formDTO.duts[{#index#}].wiBin" type="text" class="text">
+			</td>
+			<td>
+				<select data-name="dutWiPattern" name="formDTO.duts[{#index#}].wiPattern" class="select">
+                    <option value=""></option>
+                    <option value=">" title=">">></option>
+                    <option value="<" title="<"><</option>
+                    <option value=">=" title=">=">>=</option>
+                    <option value="<=" title="<="><=</option>
+                </select>
+			</td>
+			<td>
+				<input data-name="dutWiValue" name="formDTO.duts[{#index#}].wiValue" type="text" class="text" style="width:90%" data-flag="digital.3"/><span style="padding-left:3px;">%</span>
+				<input name="formDTO.duts[{#index#}].wiType" value="DUT" type="hidden"/>
+			</td>
+			<td>
+				<a href="javascript:;" class="repeat-remove icon-delete-20"></a>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+	</code>
+	var setting =
+	{
+		repeat : '.repeat-editMe5',
+		min : 1,
+		max : 10,
+		init : 1,
+		onMin : function(sender)
+		{
+			$.microTip(
+			{
+				message : '至少需要一行记录.'
+			},sender);
+		},
+		onRemoveBefore : function($item,sender)
+		{
+			var _this = this;
+			$.microConfirm(
+			{
+				message : '确定删除?',
+				confrim : '确定',
+				cancel : '取消',
+				onConfirm : function()
+				{
+					_this.remove($item, sender);
+				}
+			}, sender);
+		}
+	};
+</script>
+
+<script id="tmpl-repeat-editMe6" type="text/repeat">
+	<code>
+		<tr class="repeat-item" data-repeat-index="{#index#}">
+			<td>
+
+			</td>
+			<td class="repeat-no">
+				1
+			</td>
+			<td>
+				<input data-name="yieldWiCode" name="formDTO.yields[{#index#}].wiCode" type="text" class="text">
+			</td>
+			<td>
+				<input data-name="yieldWiBin" name="formDTO.yields[{#index#}].wiBin" type="text" class="text">
+			</td>
+			<td>
+				<select data-name="yieldWiPattern" name="formDTO.yields[{#index#}].wiPattern" class="select">
+                    <option value=""></option>
+                    <option value=">" title=">">></option>
+                    <option value="<" title="<"><</option>
+                    <option value=">=" title=">=">>=</option>
+                    <option value="<=" title="<="><=</option>
+                </select>
+			</td>
+			<td>
+				<input data-name="yieldWiValue" name="formDTO.yields[{#index#}].wiValue" type="text" class="text" style="width:90%" data-flag="digital.3"/><span style="padding-left:3px;">%</span>
+				<input name="formDTO.yields[{#index#}].wiType" value="YEILD" type="hidden"/>
+			</td>
+			<td>
+				<a href="javascript:;" class="repeat-remove icon-delete-20"></a>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+	</code>
+	var setting =
+	{
+		repeat : '.repeat-editMe6',
+		min : 1,
+		max : 10,
+		init : 1,
+		onMin : function(sender)
+		{
+			$.microTip(
+			{
+				message : '至少需要一行记录.'
+			},sender);
+		},
+		onRemoveBefore : function($item,sender)
+		{
+			var _this = this;
+			$.microConfirm(
+			{
+				message : '确定删除?',
+				confrim : '确定',
+				cancel : '取消',
+				onConfirm : function()
+				{
+					_this.remove($item, sender);
+				}
+			}, sender);
+		}
+	};
+</script>
+
+<script type="text/dialog" id="yzsq-guide">
+<div class="yzsq-guide">
+    <ul>
+        <li data-flag="NP">
+            <label>新程序导入量产</label>
+        </li>
+        <li data-flag="PU">
+            <label>程序升级</label>
+        </li>
+        <li data-flag="MC">
+            <label>WITS监控设定</label>
+        </li>
+        <li data-flag="SP">
+            <label>小批量制品特殊测试</label>
+        </li>
+    </ul>
+</div>
+</script>
+<script src="http://172.28.208.145/resource/script/request-config.js" ></script>
+<script src="http://172.28.208.145/resource/script/require.js" data-main="http://172.28.208.145/resource/script/request-form.js"></script>
+<script>
+    var allDiv = "";
+    function requireReady(form)
+    {
+        loadScript();
+
+        
+
+var rules = {};
+rules['audit-decision']={required:true, groups:['submit']};
+rules['taskInfo.comments']={required:true,groups:['驳回(Reject)','否决并终止(Deny)']}
+rules['taskInfo.nextPartcipantsBean.Appoint']={required:true, groups:['转办(Transfer)']};
+rules['taskInfo.nextPartcipantsBean.moreApprovers']={required:true, groups:['加签(More Approval)']};
+
+var messages = {};
+messages['audit-decision']={required:"审批决策必填"};
+messages['taskInfo.comments']={required:"审批备注不能为空"};
+messages['taskInfo.nextPartcipantsBean.moreApprovers']={required:'加签人员不能为空'};
+messages['taskInfo.nextPartcipantsBean.Appoint']={required:'转办人员不能为空'};
+
+<!-- DetailValidator -->
+$.validator.addMethod('subconValidator', function(value, element, param){
+    return $("select[name='engSubconInfos_select'] option").length > 0;
+});
+
+<!--  -->
+$.validator.addMethod('attachApp5Validator', function(value, element, param){
+    var attachIds = $("#AttachmentAttachApp").val().replace(" ","");
+    var flag = true;
+    if("" != attachIds){
+    var attachArr = attachIds.split(",");
+        flag = attachArr.length <= 5;
+    }
+    return flag;
+});
+        
+
+rules['formDTO.form.omfType']={required:true, groups:['submit','核可(Approve)']};
+rules['formDTO.form.iecReqNo']={required:isOmfNPPU, groups:['submit','核可(Approve)']};
+rules['formDTO.form.sample']={required:isOmfNPPU, groups:['submit','核可(Approve)']};
+rules['detailDivision']={divisionNotNull:true,
+                            divisionMatchMC:isOmfMc,
+                            divisionMatch:isOmfNotMc,
+                            divisionNpOnly:isOmfNp,
+                            divisionPuEnd:isOmfPu,
+                            divisionPuOnly:isOmfPu,
+                            divisionSpSingle:isOmfSP,groups:['submit','核可(Approve)']};
+rules['detailProductCode']={proCodeNotNull:true, groups:['submit','核可(Approve)']};
+rules['detailLotId']={lotIdNotNull:isOmfSP, lotIdRepeat:isOmfSP, lotIdMatch:isOmfSP, groups:['submit','核可(Approve)']};
+rules['detailIsExtends']={isExtendsNotNull:isOmfSP, groups:['submit','核可(Approve)']};
+rules['detailPwsCode']={pwsCodeNotNull:isSampNotS, groups:['submit','核可(Approve)']};
+rules['detailPwsIecPw']={pwsIecPwNotNull:isSampNotS, groups:['submit','核可(Approve)']};
+rules['detailPwsProductName']={pwsProductNameNotNull:isSampNotS, groups:['submit','核可(Approve)']};
+rules['detailPwsProbeCartPicNo']={pwsProbeCartPicNoNotNull:isSampNotSOmfSP, groups:['submit','核可(Approve)']};
+rules['detailPwsTestBaseNo']={pwsTestBaseNoNotNull:isSampNotSOmfSP, groups:['submit','核可(Approve)']};
+rules['detailPwsTemperature']={pwsTemperatureNotNull:isSampNotSOmfSP, groups:['submit','核可(Approve)']};
+rules['detailPwsTestPlatform']={pwsTestPlatformNotNull:isSampNotSOmfSP, groups:['submit','核可(Approve)']};
+rules['detailPwsDirectory']={pwsDirectoryNotNull:isSampNotSOmfSP, groups:['submit','核可(Approve)']};
+rules['detailPwsProgName']={pwsProgNameNotNull:isSampNotSOmfSP, groups:['submit','核可(Approve)']};
+rules['formDTO.form.mapMerge']={required:isSampNotS, groups:['submit','核可(Approve)']};
+rules['detailMapsTargetCode']={mapsTargetCodeNotNull:isSampNotSMapY, groups:['submit','核可(Approve)']};
+rules['detailMapsComposeCode']={mapsComposeCodeNotNull:isSampNotSMapY, groups:['submit','核可(Approve)']};
+rules['formDTO.form.watchSelect']={required:isOmfSP, groups:['submit','核可(Approve)']};
+rules['detailSingleWiCode']={singleWiCodeNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+rules['detailSingleWiBin']={singleWiBinNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+rules['detailSingleWiPattern']={singleWiPatternNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+rules['detailSingleWiValue']={singleWiValueNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+rules['detailDutWiCode']={dutWiCodeNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+rules['detailDutWiBin']={dutWiBinNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+rules['detailDutWiPattern']={dutWiPatternNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+rules['detailDutWiValue']={dutWiValueNotNull:isWathNotHas, groups:['submit','核可(Approve)']};
+
+
+
+
+rules['attachOtherV']={attachOtherSingle:true, groups:['submit','核可(Approve)']};
+
+messages['formDTO.form.omfType']={required:"Online依赖类型不能为空"};
+messages['formDTO.form.iecReqNo']={required:"测试程序报告书(IEC/DCC)不能为空"};
+messages['formDTO.form.sample']={required:"抽样选择不能为空"};
+messages['detailDivision']={divisionNotNull:"基地品名不能为空",
+                            divisionMatchMC:"基地品名必须非中文（英文字母、数字、中杠、星号）",
+                            divisionMatch:"基地品名必须非中文（英文字母、数字、中杠）",
+                            divisionNpOnly:"基地品名已在其他类型为【新程序导入量产】的表单中存在",
+                            divisionPuEnd:"基地品名所对应【新程序导入量产】的表单不存在或流程未结束",
+                            divisionPuOnly:"基地品名已在其他类型为【程序升级】的表单中存在",
+                            divisionSpSingle:"【小批量制品特殊测试】情况下基地品名最多只能添加一行"};
+messages['detailProductCode']={proCodeNotNull:"产品代码不能为空"};
+messages['detailLotId']={lotIdNotNull:"Lot ID不能为空",
+                         lotIdRepeat:"同张表单LOT ID不可重复",
+                         lotIdMatch:"Lot ID必须为非中文（英文字母、数字、中杠），且长度大于等于9位小于等于11"};
+messages['detailIsExtends']={isExtendsNotNull:"目标Lot分割的子Lot是否继承母Lot特殊条件不能为空"};
+messages['detailPwsCode']={pwsCodeNotNull:"工程CODE不能为空"};
+messages['detailPwsIecPw']={pwsIecPwNotNull:"IEC中PW序列不能为空"};
+messages['detailPwsProductName']={pwsProductNameNotNull:"品种参数名不能为空"};
+messages['detailPwsProbeCartPicNo']={pwsProbeCartPicNoNotNull:"探针卡图面No.不能为空"};
+messages['detailPwsTestBaseNo']={pwsTestBaseNoNotNull:"测试基板No.不能为空"};
+messages['detailPwsTemperature']={pwsTemperatureNotNull:"测试温度不能为空"};
+messages['detailPwsTestPlatform']={pwsTestPlatformNotNull:"测试平台不能为空"};
+messages['detailPwsDirectory']={pwsDirectoryNotNull:"程序路径不能为空"};
+messages['detailPwsProgName']={pwsProgNameNotNull:"程序名不能为空"};
+messages['formDTO.form.mapMerge']={required:"工程间MAP合成不能为空"};
+messages['detailMapsTargetCode']={mapsTargetCodeNotNull:"Target Process Code不能为空"};
+messages['detailMapsComposeCode']={mapsComposeCodeNotNull:"Compose Process Code不能为空"};
+messages['formDTO.form.watchSelect']={required:"监控选择不能为空"};
+messages['detailSingleWiCode']={singleWiCodeNotNull:"单一BIN异常监控工程code不能为空"};
+messages['detailSingleWiBin']={singleWiBinNotNull:"单一BIN异常监控Bin不能为空"};
+messages['detailSingleWiPattern']={singleWiPatternNotNull:"单一BIN异常监控比较符不能为空"};
+messages['detailSingleWiValue']={singleWiValueNotNull:"单一BIN异常监控比较值不能为空"};
+messages['detailDutWiCode']={dutWiCodeNotNull:"DUT间差异常监控工程code不能为空"};
+messages['detailDutWiBin']={dutWiBinNotNull:"DUT间差异常监控Bin不能为空"};
+messages['detailDutWiPattern']={dutWiPatternNotNull:"DUT间差异常监控比较符不能为空"};
+messages['detailDutWiValue']={dutWiValueNotNull:"DUT间差异常监控比较值不能为空"};
+
+
+
+
+messages['attachOtherV']={attachOtherSingle:"附件只能上传一个"};
+
+$.validator.addMethod('divisionNotNull', function(value, element, param){
+    var flag = true;
+    flag =  !!$(":input[data-name='divDivisionName']").size();
+    $("input[data-name='divDivisionName']").each(function(){
+        if(!$(this).val()){
+            flag = false;
+            return;
+        }
+    })
+    return flag;
+});
+
+$.validator.addMethod('divisionMatchMC', function(value, element, param){
+    var flag = true;
+    if(isOmfMc()){
+        $("input[data-name='divDivisionName']").each(function(){
+            var omfType = $("input[name='formDTO.form.omfType']").val();
+            if(!checkDivisionNameAscii($(this).val(), omfType)){
+                flag = false;
+                return;
+            }
+        });
+    }
+    return flag;
+});
+
+$.validator.addMethod('divisionMatch', function(value, element, param){
+    var flag = true;
+    if(isOmfNotMc()){
+        $("input[data-name='divDivisionName']").each(function(){
+            var omfType = $("input[name='formDTO.form.omfType']").val();
+            if(!checkDivisionNameAscii($(this).val(), omfType)){
+                flag = false;
+                return;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('divisionNpOnly', function(value, element, param){
+    var flag = true;
+    if(isOmfNp()){
+        var _paramVal = "";
+        var _isOnly = "Y";
+        $("[data-name = 'divDivisionName']").each(function(){
+            _paramVal += $(this).val() + ","
+        });
+        $.ajax({
+            cache: true,type: "POST",url:"/engin/web/form/omf/online-mosfet!ajaxValiDivNpOnly.do",
+            data:{
+                formId : '',
+                paramVal : _paramVal
+            },
+            async: false,dataType:"text",
+            success: function(data) {
+                _isOnly = data;
+            }
+        });
+        flag = "Y" == _isOnly
+    }
+    return flag;
+});
+
+$.validator.addMethod('divisionPuEnd', function(value, element, param){
+    var flag = true;
+    if(isOmfPu()){
+        var _paramVal = "";
+        var _isEnd = "Y";
+        $("[data-name = 'divDivisionName']").each(function(){
+            _paramVal += $(this).val() + ","
+        });
+        $.ajax({
+            cache: true,type: "POST",url:"/engin/web/form/omf/online-mosfet!ajaxValiDivPuEnd.do",
+            data:{
+                paramVal : _paramVal
+            },
+            async: false,dataType:"text",
+            success: function(data) {
+                _isEnd = data;
+            }
+        });
+        flag = "Y" == _isEnd;
+    }
+    return flag;
+});
+
+$.validator.addMethod('divisionPuOnly', function(value, element, param){
+    var flag = true;
+    if(isOmfPu()){
+        var _paramVal = "";
+        var _isOnly = "Y";
+        $("[data-name = 'divDivisionName']").each(function(){
+            _paramVal += $(this).val() + ","
+        });
+        $.ajax({
+            cache: true,type: "POST",url:"/engin/web/form/omf/online-mosfet!ajaxValiDivPuOnly.do",
+            data:{
+                formId : '',
+                paramVal : _paramVal
+            },
+            async: false,dataType:"text",
+            success: function(data) {
+                _isOnly = data;
+            }
+        });
+        flag = "Y" == _isOnly
+    }
+    return flag;
+});
+
+$.validator.addMethod('lotSpOnly', function(value, element, param){
+    var flag = true;
+    if(isOmfSP()){
+        var _paramVal = "";
+        var _isOnly = "Y";
+        $("[data-name = 'lotsLotId']").each(function(){
+            _paramVal += $(this).val() + ","
+        });
+        $.ajax({
+            cache: true,type: "POST",url:"/engin/web/form/omf/online-mosfet!ajaxValiLotSpOnly.do",
+            data:{
+                formId : '',
+                paramVal : _paramVal
+            },
+            async: false,dataType:"text",
+            success: function(data) {
+                _isOnly = data;
+            }
+        });
+        flag = "Y" == _isOnly
+    }
+    return flag;
+});
+
+$.validator.addMethod('divisionSpSingle', function(value, element, param){
+    var flag = true;
+    if(isOmfSP()){
+        var _len = $(":input[data-name = 'divDivisionName']").length;
+        flag = _len <= 1;
+    }
+    return flag;
+});
+
+$.validator.addMethod('proCodeNotNull', function(value, element, param){
+    var flag = true;
+    flag =  !!$(":input[data-name='divProductCode']").size();
+    $("[data-name='divProductCode']").each(function(){
+        if(!$(this).val()){
+            flag = false;
+        }
+    })
+    return flag;
+});
+
+$.validator.addMethod('lotIdNotNull', function(value, element, param){
+    var flag = true;
+    if(isOmfSP()){
+        flag =  !!$(":input[data-name='lotsLotId']").size();
+        $("[data-name='lotsLotId']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('lotIdRepeat', function(value, element, param){
+    var flag = true;
+    if(isOmfSP()){
+        flag =  !!$(":input[data-name='lotsLotId']").size();
+        var _con = new Array();
+        $("[data-name='lotsLotId']").each(function(){
+            if($(this).val()){
+                if(_con.length > 0 && _con.contains($(this).val())){
+                    flag = false;
+                }
+                _con.push($(this).val());
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('lotIdMatch', function(value, element, param){
+    var flag = true;
+    if(isOmfSP()){
+        $("[data-name='lotsLotId']").each(function(){
+            var _isCN = checkLotAscii($(this).val());
+            if(this.value.length <9 ||this.value.length > 11 || !_isCN) flag = false;
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('isExtendsNotNull', function(value, element, param){
+    var flag = true;
+    if(isOmfSP()){
+        flag =  !!$(":input[data-name='lotsIsExtends']").size();
+        $("[data-name='lotsIsExtends']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsCodeNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotS()){
+        flag =  !!$(":input[data-name='pwsCode']").size();
+        $("[data-name='pwsCode']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsIecPwNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotS()){
+        flag =  !!$(":input[data-name='pwsIecPw']").size();
+        $("[data-name='pwsIecPw']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsProductNameNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotS()){
+        flag =  !!$(":input[data-name='pwsProductName']").size();
+        $("[data-name='pwsProductName']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsProbeCartPicNoNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSOmfSP()){
+        flag =  !!$(":input[data-name='pwsProbeCartPicNo']").size();
+        $("[data-name='pwsProbeCartPicNo']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsTestBaseNoNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSOmfSP()){
+        flag =  !!$(":input[data-name='pwsTestBaseNo']").size();
+        $("[data-name='pwsTestBaseNo']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsTemperatureNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSOmfSP()){
+        flag =  !!$(":input[data-name='pwsTemperature']").size();
+        $("[data-name='pwsTemperature']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsTestPlatformNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSOmfSP()){
+        flag =  !!$(":input[data-name='pwsTestPlatform']").size();
+        $("[data-name='pwsTestPlatform']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsDirectoryNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSOmfSP()){
+        flag =  !!$(":input[data-name='pwsDirectory']").size();
+        $("[data-name='pwsDirectory']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('pwsProgNameNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSOmfSP()){
+        flag =  !!$(":input[data-name='pwsProgName']").size();
+        $("[data-name='pwsProgName']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('mapsTargetCodeNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSMapY()){
+        flag =  !!$(":input[data-name='mapsTargetCode']").size();
+        $("[data-name='mapsTargetCode']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('mapsComposeCodeNotNull', function(value, element, param){
+    var flag = true;
+    if(isSampNotSMapY()){
+        flag =  !!$(":input[data-name='mapsComposeCode']").size();
+        $("[data-name='mapsComposeCode']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('singleWiCodeNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='singleWiCode']").size();
+        $("[data-name='singleWiCode']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('singleWiBinNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='singleWiBin']").size();
+        $("[data-name='singleWiBin']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('singleWiPatternNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='singleWiPattern']").size();
+        $("[data-name='singleWiPattern']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('singleWiValueNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='singleWiValue']").size();
+        $("[data-name='singleWiValue']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('dutWiCodeNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='dutWiCode']").size();
+        $("[data-name='dutWiCode']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('dutWiBinNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='dutWiBin']").size();
+        $("[data-name='dutWiBin']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('dutWiPatternNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='dutWiPattern']").size();
+        $("[data-name='dutWiPattern']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('dutWiValueNotNull', function(value, element, param){
+    var flag = true;
+    if(isWathNotHas()){
+        flag = !!$(":input[data-name='dutWiValue']").size();
+        $("[data-name='dutWiValue']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('yieldWiCodeNotNull', function(value, element, param){
+    var flag = true;
+    if(isOnlineWatchNotHas()){
+        flag = !!$(":input[data-name='yieldWiCode']").size();
+        $("[data-name='yieldWiCode']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('yieldWiBinNotNull', function(value, element, param){
+    var flag = true;
+    if(isOnlineWatchNotHas()){
+        flag = !!$(":input[data-name='yieldWiBin']").size();
+        $("[data-name='yieldWiBin']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('yieldWiPatternNotNull', function(value, element, param){
+    var flag = true;
+    if(isOnlineWatchNotHas()){
+        flag = !!$(":input[data-name='yieldWiPattern']").size();
+        $("[data-name='yieldWiPattern']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('yieldWiValueNotNull', function(value, element, param){
+    var flag = true;
+    if(isOnlineWatchNotHas()){
+        flag = !!$(":input[data-name='yieldWiValue']").size();
+        $("[data-name='yieldWiValue']").each(function(){
+            if(!$(this).val()){
+                flag = false;
+            }
+        })
+    }
+    return flag;
+});
+
+$.validator.addMethod('attachOtherSingle', function(value, element, param){
+    var flag = true;
+    var ink = $("#AttachmentAttachOther").val();
+    if("" != ink && undefined != ink){
+        var inkArr = ink.split(",");
+        flag = inkArr.length == 1;
+    }
+    return flag;
+});
+
+<!-- Online依赖类型=="WITS监控设定"时，基地品名必须非中文（英文字母、数字、中杠、星号） -->
+<!-- Online依赖类型<>"WITS监控设定"时，基地品名必须非中文（英文字母、数字、中杠） -->
+function checkDivisionNameAscii(data, omfType){
+	var flag = true;
+	if(omfType == 'MC'){
+		$.each(data.split(''), function(index, value){
+			var code = value.charCodeAt(); 
+			if(!((code >= 48 && code <= 57) || code == 45 || code == 42 || (code >= 65 && code <= 90) || (code >= 97 && code <= 122))) {
+				flag = false;
+				return;
+			}
+		});	
+	}else{
+		$.each(data.split(''), function(index, value){
+			var code = value.charCodeAt(); 
+			if(!((code >= 48 && code <= 57) || code == 45 || (code >= 65 && code <= 90) || (code >= 97 && code <= 122))) {
+				flag = false;
+				return;
+			}
+		});	
+	}	
+	return flag;
+}
+        form.setValidate('#requrest-form', rules, messages);
+
+        form.submitValidateBefore = function(data)
+        {
+            $("#submitDecision").val("创建(Create)");
+            compareDivision();
+        };
+
+        form.submitValidateAfter = function (data)
+        {
+            var _lotArr = validateLotOnly();
+            if(_lotArr.length > 0){
+                var _msg = "Lot ID【"+_lotArr.join(",")+"】已经在其他类型为【小批量制品特殊测试】的表单中存在"
+                $(".validate-messages-list").append('<li id="message_lotId">'+ _msg +'</li>');
+                $(".validate-messages").show('fast').css("data-validate","true");
+                $('html,body').animate({scrollTop: 0 }, 300);
+//                $(".validate-messages").find(".validate-messages-list").html(_data);
+                return false;
+            }
+        };
+
+        form.submitBefore = function(data)
+        {
+            var _omfType = $("[name='formDTO.form.omfType']").val();
+            var _paramVal = getParamVal(_omfType);
+
+            if("NP" == _omfType || "PU" == _omfType || "SP" == _omfType){
+                var len = ajaxLoadRelatedForms(_omfType,_paramVal);
+                if(len > 0){
+                    openRelatedForms(_omfType, _paramVal);
+                    return false;
+                }
+            }
+        }
+
+    }
+</script>
+</html>

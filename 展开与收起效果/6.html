@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			div{
+				text-align: center;
+				margin: 0 auto;
+			}
+			#container{
+				background-color: #ccc;
+				overflow: hidden;
+				width: auto;
+			}
+			.wel{
+				background-color: #aaa;
+				width: 550px;
+				padding: 5px 0;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>JS实现广告条自中间向两侧动画展开，停留5s后动画收起</h1>
+		<div id="container">
+			<h1>欢迎来到此地~~</h1>
+			<img src="img/missFortune.png"/>
+		</div>
+		<div class="wel">我们欢迎你</div>
+	</body>
+	
+	<script type="text/javascript">
+		var w=0;
+		function addW(){
+			if(w<550){
+				w+=5;
+				document.getElementById("container").style.width = w + "px"; 
+			}else{
+				return;
+			}
+			setTimeout("addW()",30);
+		}
+		window.onload = function show(){
+			addW();
+			setTimeout("delW()",5000);
+		}
+		function delW(){
+			if(w>0){
+				w-=5;
+				document.getElementById("container").style.width = w + "px"; 
+			}else{
+				return;
+			}
+			setTimeout("delW()",30);
+		}
+	</script>
+</html>

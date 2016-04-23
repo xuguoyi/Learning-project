@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			p{
+				line-height: 25px;
+			}
+			.con{
+				width: 100%;
+				height: 100%;
+				background-color: #ccc;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0.5;
+				z-index: 2;
+				display: none;
+			}
+			#tin{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -150px;
+				margin-left: -250px;
+				width: 500px;
+				height: 300px;
+				z-index: 3;
+				background-color: #fff;
+				border: 1px solid #aaa;
+				display: none;
+			}
+			#head{
+				height: 50px;
+				background-color: #C5DAF0;
+				text-align: right;
+			}
+			#head:hover{
+				cursor: move;
+			}
+			.close{
+				margin: 15px 15px 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>鼠标拖拽效果</h1>
+		<h3>CSS cursor属性</h3>
+		<p>
+			url:需使用的自定义光标的 URL。注释：请在此列表的末端始终定义一种普通的光标，以防没有由 URL 定义的可用光标<br />
+			default:默认光标（通常是一个箭头）<br />
+			auto:默认。浏览器设置的光标。<br />
+			crosshair:光标呈现为十字线。<br />
+			pointer:光标呈现为指示链接的指针（一只手）<br />
+			move:此光标指示某对象可被移动。<br />
+			e-resize:此光标指示矩形框的边缘可被向右（东）移动。<br />
+			ne-resize:此光标指示矩形框的边缘可被向上及向右移动（北/东）。<br />
+			nw-resize:此光标指示矩形框的边缘可被向上及向左移动（北/西）。<br />
+			n-resize:此光标指示矩形框的边缘可被向上（北）移动。<br />
+			se-resize:此光标指示矩形框的边缘可被向下及向右移动（南/东）<br />
+			sw-resize:此光标指示矩形框的边缘可被向下及向左移动（南/西）<br />
+			s-resize:此光标指示矩形框的边缘可被向下移动（北/西）<br />
+			w-resize:此光标指示矩形框的边缘可被向左移动（西）。<br />
+			text:此光标指示文本<br />
+			wait:此光标指示程序正忙（通常是一只表或沙漏）。<br />
+			help:此光标指示可用的帮助（通常是一个问号或一个气球）。
+		</p>
+		<p>
+			遮罩防止鼠标选中事件的处理代码onselectstart="return false"
+		</p>
+		<p>鼠标事件1：鼠标在标题栏上按下时，计算鼠标相对拖拽元素的左上角的左边，并且标记元素为可拖动。<br>
+			鼠标事件2：鼠标开始移动，要检测浮层是否可标记为移动，若是，则更新元素的位置到当前鼠标的位置。（注意：要减去第一步中获得的偏移）<br />
+			鼠标事件3：鼠标松开的时候，标记元素为不可拖动状态即可。
+		</p>
+		<button type="button" id="move" onclick="move">弹出移动层</button>
+		<div class="con"></div>
+		<div id="tin">
+			<div id="head">
+				<button type="button" class="close">关闭</button>
+			</div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".move").click(function(){
+				$(".con,.tin").show();
+			});
+			$(".close").click(function(){
+				$(".con,.tin").hide();
+			});
+		})
+		function move(){
+			var move = document.getElementById("move");
+			move.style.addClass = "move";
+		}
+		
+		function g(id){
+        	return document.getElementById(id);    
+    	}
+		var mouseOffsetX = 0;//偏移
+		var mouseOffsetX = 0;
+		var isDraging = false;//是否可拖拽的标记
+		g('head').addEventListener('mousedowm',function(e){
+			var e = e || window.event;
+			mouseOffsetX = e.pageX - g('tin').offsetLeft;
+			mouseOffsetY = e.pageY - g('tin').offsetTop;
+			isDraging = true;
+		});
+		
+		document.onmousemove = function(e){
+			var e= e||window.event;
+			var mouseX = e.pageX;
+			var mouseY = e.pageY;
+			var moveX = 0;
+			var moveY = 0;
+			if(isDraging === true){
+				moveX = mouseX - mouseOffsetX;
+				moveY = mouseY - mouseOffsetY;
+				g('head').style.left = moveX +'px'
+			}
+		}
+		
+		document.onmouseup = function(){
+			isDraging = false;
+		}
+	</script>
+</html>

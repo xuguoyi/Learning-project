@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.container{
+				width: 550px;
+				margin: 0 auto;
+				background-color: #ccc;
+				padding: 10px;
+				border-bottom: 5px solid #aaa;
+			}
+			a{
+				background-color: #aaa;
+				padding: 5px 10px;
+				display: block;
+				width: 80px;
+				text-align: center;
+				margin: 0 auto;
+				text-decoration: none;
+				color: #000;
+			}
+			#d-n{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<p>手机——商品筛选</p>
+			<p>网络：移动4G（TD-LTE） 联通3G（TD—LTM） 电信3G（WCDMA）</p>
+			<div id="d-n">
+				<p>价格：5000以上  4000-4999 3000-3999 2000-2999</p>
+				<p>特点：JDphone计划、 “0”元购机、防水、长待机、1000F全高清屏</p>
+			</div>
+		</div>
+		<a id="more" href="javascript:show()">更多选项+</a>
+	</body>
+	<script type="text/javascript">
+		function show(){
+			document.getElementById("d-n").style.display = "block";
+			document.getElementById("more").innerHTML = "收起~";
+			document.getElementById("more").href="javascript:hide()";
+		}
+		function hide(){
+			document.getElementById("d-n").style.display = "none";
+			document.getElementById("more").innerHTML = "更多选项+";
+			document.getElementById("more").href="javascript:show()";
+		}
+	</script>
+</html>

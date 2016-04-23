@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				text-align: center;
+			}
+			#obtn{
+				padding: 5px 10px;
+				background-color: #0f0;
+			}
+			.content{
+				line-height: 50px;
+				padding-left: 20px;
+			}
+			#mask{
+				background-color:#ccc;
+				opacity: 0.5;
+				filter: alpha(opacity=50);
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				display: none;
+			}
+			#load{
+				position: fixed;
+				left: 30%;
+				top: 30%;
+				z-index: 3;
+				width: 670px;
+				height: 380px;
+				background-color: #3f7fbf;
+				display: none;
+			}
+			#close1{
+				position: absolute;
+				top: 0;
+				height: 30px;
+				width: 670px;
+				background-color: #f00;
+				text-align: center;
+				padding-top: 10px;
+			}
+			span{
+				color: #fff;
+				margin-top:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h1>弹出层效果知识点</h1>
+			<span id="obtn">弹出层</span>
+			<h2>定位</h2>
+			<p>absolut，relative，fixed</p>
+			<h2>事件</h2>
+			<p>onload，onclick</p>
+			<h2>DOM操作</h2>
+			<p>getElementById()，scrollHeight()，clientHeight()，createElement()，appendChild()，removeChild()</p>
+			<h2>函数的基本概念</h2>
+		</div>
+		<div id="mask"></div>
+			<div id="load">
+				<div id="close1">
+					<span>关闭</span>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				var obtn = document.getElementById("obtn");
+				var close1 = document.getElementById("close1");
+				var mask = document.getElementById("mask");
+				var load = document.getElementById("load");			
+			}
+			obtn.onclick = function(){
+				mask.style.display = "block";
+				load.style.display = "block";
+			}
+			close1.onclick = function(){
+				mask.style.display = "none";
+				load.style.display = "none";
+			}
+		</script>
+	</body>
+</html>

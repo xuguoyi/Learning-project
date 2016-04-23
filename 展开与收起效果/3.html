@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			.container{
+				width: 550px;
+				margin: 0 auto;
+				background-color: #ccc;
+				padding: 10px;
+				border-bottom: 5px solid #aaa;
+			}
+			span{
+				background-color: #aaa;
+				padding: 5px 10px;
+				display: block;
+				width: 80px;
+				text-align: center;
+				margin: 0 auto;
+				color: #000;
+			}
+			#d-n{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>jQuery实现点击按钮展开和收起动画效果</h1>
+		<h2>jQuery:toggle()方法：</h2>
+		<p>可依次调用N个指定的函数，直到最后一个函数，然后重复对这个函数轮番调用。</p>
+		<h2>语法：</h2>
+		<p>toggle(fn,fn2,[fn3,fn4...]),其中fn、fn2、fn3、fn4等函数依次调用。</p>
+		<div class="container">
+			<p>手机——商品筛选</p>
+			<p>网络：移动4G（TD-LTE） 联通3G（TD—LTM） 电信3G（WCDMA）</p>
+			<div id="d-n">
+				<p>价格：5000以上  4000-4999 3000-3999 2000-2999</p>
+				<p>特点：JDphone计划、 “0”元购机、防水、长待机、1000F全高清屏</p>
+			</div>
+		</div>
+		<span id="morer">更多选项+</span>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("body").on("#morer","click",function(){
+				if($(this).text()=="更多选项+"){
+					$(this).text("收起~");
+					$("#d-n").show("1000");
+				}else{
+					$(this).text("更多选项+");
+					$("#d-n").hide("1000");
+				}
+			});
+		});
+	</script>
+</html>

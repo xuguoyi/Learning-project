@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#single dt,.single dd{
+				float: left;
+			}
+			#single a{
+				color: #000;
+				text-decoration: none;
+			}
+			#single a:hover{
+				color: #f00;
+				text-decoration: underline;
+			}
+			#single b{
+				display: block;
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				margin-left: -35px;
+				background-image: url(img/input.jpg);
+				background-position: -113px -98px;
+			}
+			dd:hover b{
+				background-position: -198px -98px;
+			}
+			.sel b,.sel a:hover b{
+				background-position: -148px -98px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>单选按钮的美化</h1>
+		<form action="#" method="post" name="typeForm">
+			<label>普通</label>
+			<input type="radio" name="single" checked/>全部
+			<input type="radio" name="single"/>苹果
+			<input type="radio" name="single"/>香蕉
+		</form>
+		<dl id="single">
+			<dt>美化</dt>
+			<dd class="sel">
+				<a href=""><b></b>全部</a>
+			</dd>
+			<dd>
+				<a href=""><b></b>苹果</a>
+			</dd>
+			<dd>
+				<a href=""><b></b>香蕉</a>
+			</dd>
+		</dl>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+		})
+	</script>
+</html>

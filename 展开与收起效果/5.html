@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1{
+				text-align: center;
+			}
+			ul li ul{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>一个展开其他关闭</h1>
+		<ul>
+			<li class="title">
+				一
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</li>
+			<li class="title">
+				二
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</li>
+			<li class="title">
+				三
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</li>
+			<li class="title">
+				四
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(".title").click(function(){
+			$(this).children("ul").toggle();
+		});
+	</script>
+</html>
